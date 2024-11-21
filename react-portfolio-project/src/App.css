@@ -1,0 +1,100 @@
+/* Main Website Styling */
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Website Styling */
+/* Displays the site title */ 
+.site-title {
+  text-shadow: 5px 5px rgb(82, 78, 78);
+}
+/* Displays the introduction picture */
+.intro-div {
+  background-color: black;
+  width: 1000px;
+  height: 400px;
+  margin: 40px;
+  border-radius: 25px;
+}
+
+/* Displays pictures to the left */
+.display-container-left {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  width: 900px;
+  margin: 30px;
+}
+
+/* Displays pictures to the right */
+.display-container-right {
+  display: flex;
+  background-color: #4B4A4A;
+  justify-content: space-around;
+  padding: 20px;
+  width: 900px;
+  margin: 30px;
+}
+
+/* Information for each picture */
+.information {
+  font-size: 25px;
+}
+
+/* Individual picture styling */
+.picture-div {
+  background-color: black;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.picture-div:hover {
+  background-color: black;
+  border-radius: 35px;
+  width: 100px;
+  height: 100px;
+  transition: 1s;
+}
