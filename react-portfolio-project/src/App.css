@@ -49,6 +49,7 @@
 .site-title {
   text-shadow: 5px 5px rgb(82, 78, 78);
 }
+
 /* Displays the introduction picture */
 .intro-div {
   background-color: black;
@@ -106,4 +107,19 @@
   width: 100px;
   height: 100px;
   transition: 1.2s;
+}
+
+/* NavBar Styling */
+
+.nav-bar-container {
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-link {
+  margin: 20px;
+  list-style-type: none;
 }
