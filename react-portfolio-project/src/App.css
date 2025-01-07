@@ -66,7 +66,7 @@
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  width: 900px;
+  width: 1200px;
   margin: 30px;
 }
 
@@ -76,7 +76,7 @@
   background-color: #4B4A4A;
   justify-content: space-around;
   padding: 20px;
-  width: 900px;
+  width: 1200px;
   margin: 30px;
 }
 
@@ -97,18 +97,33 @@
 
 .picture {
   background-color: black;
+  border: white solid 5px;
   border-radius: 30px;
-  width: 200px;
-  height: 200px;
-  transition: 0.5s;
+  width: 570px;
+  height: 400px;
+  /* transition: 0.5s; */
+  -webkit-transform:scaleX(1.50);
+  transform:scaleX(1);
 }
 
 .picture:hover {
   background-color: black;
   border-radius: 35px;
-  width: 100px;
-  height: 100px;
-  transition: 1.2s;
+  width: 450px;
+  height: 300px;
+  /* transition: 1.2s; */
+  animation-name: picture;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes picture {
+0%   {-webkit-transform:scaleX(1.50);}
+100% {-webkit-transform:scaleX(1);}
+}
+@keyframes picture {
+0%   {transform:scaleX(1.50);}
+100% {transform:scaleX(1);}
 }
 
 /* NavBar Styling */

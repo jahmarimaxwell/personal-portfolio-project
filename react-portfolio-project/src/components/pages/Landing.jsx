@@ -10,9 +10,13 @@ return (
       </div>
       <div className="display-container-left">
       <div className="picture-div">
-            <div className="picture">
-             
-            </div>
+        <a href="https://mls-dreammakers.github.io/random-users-app/">
+            {/* <div className="picture"> */}
+            <img className="picture" src="/src/pictures/Random User Generator.png">
+
+            </img>
+            {/* </div> */}
+        </a>
         </div>
             <p className="information">
                 This is information for the picture.<br />
@@ -24,11 +28,13 @@ return (
                This is information for the picture.<br />
                 Sample Picture.
             </p>
-            <div className="picture-div">
-                <div className="picture">
+      <div className="picture-div">
+        <a href="https://react-api-project.github.io/marvel-comic-react-project/">
+                <img className="picture" src="/src/pictures/Marvel React API.png">
                 
-                </div>
-            </div>
+                </img>
+        </a>
+     </div>
       </div>
       <div className="display-container-left">
             <div className="picture-div">
