@@ -32,7 +32,7 @@ return (
                 Sample Picture.
             </p>
       <div className="picture-div">
-        <a href="https://react-api-project.github.io/marvel-comic-react-project/">
+        <a href="https://github.com/React-API-Project/marvel-comic-react-project">
             <img className="picture" src="/src/pictures/Marvel React API.png">
                 
             </img>
