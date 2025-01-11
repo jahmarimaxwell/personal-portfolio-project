@@ -3,41 +3,53 @@ export default function LandingPage() {
 return (
     <>
     <h1 className="site-title">Jahmari's Portfolio</h1>
-      <h3>Coming soon!</h3>
+        <h3>Coming soon!</h3>
       {/* Display Container */}
       <div className="intro-div">
 
       </div>
       <div className="display-container-left">
-      <div className="picture-div">
-        <a href="https://mls-dreammakers.github.io/random-users-app/">
-            {/* <div className="picture"> */}
-            <img className="picture" src="/src/pictures/Random User Generator.png">
-            </img>
-            {/* </div> */}
-        </a>
-        </div>
-            <p className="information">
-            {/* title goes here */}{/* line breaks make space for div */}
-            Random User Generator App<br />
-            This app demonstrates the use of an API<br />
-            Once refreshed, it grabs random information<br /> 
-            (email, phone number, address)<br />
-            And displays it
-             </p>
+            <div className="picture-div">
+                <img className="picture" src="\src\gifs\Random User Generator App.gif"></img>
+            </div>
+            <div className="content">
+                <p className="information">
+                {/* title goes here */}{/* line breaks make space for div */}
+                <strong>Random User Generator App</strong><br />
+                This app demonstrates the use of an API<br />
+                Once refreshed, it grabs random information<br /> 
+                (email, phone number, address)<br />
+                And displays it
+                </p>
+                <a href="https://mls-dreammakers.github.io/random-users-app/">
+                    <button className="redirect">
+                        Click to view
+                    </button>
+                </a>
+            </div>
       </div>
       <div className="display-container-right">
+        <div className="content">
             <p className="information">
-               This is information for the picture.<br />
-                Sample Picture.
+               {/* title goes here */}{/* line breaks make space for div */}
+               <strong>Marvel World</strong><br />
+               This App demonstrates the use of <strong>React</strong><br />
+               and the <strong>Marvel API</strong><br />
+                It allows you to search for any Marvel<br /> 
+               character and display their image,<br />
+               as well their description. It also allows you <br />
+               to be able to see which comic issue < br /> 
+               they appear in
             </p>
-      <div className="picture-div">
-        <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-            <img className="picture" src="/src/pictures/Marvel React API.png">
-                
-            </img>
-        </a>
-     </div>
+            <a href="https://github.com/React-API-Project/marvel-comic-react-project">
+            <button className="redirect">
+                Click to view
+            </button>
+            </a>
+        </div>
+        <div className="picture-div">
+             <img className="picture" src="\src\gifs\Marvel React API.gif"></img>
+        </div>
       </div>
       <div className="display-container-left">
             <div className="picture-div">

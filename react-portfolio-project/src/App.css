@@ -49,7 +49,29 @@
   color: #888;
 }
 
-/* Website Styling */
+/* /////// Website Styling ////////
+
+/* NavBar Styling */
+
+.nav-bar-container {
+  background-color: white;
+  /* Centers NavBar */
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* Makes NavBar sticky */
+  position: sticky;
+  top: 0;
+}
+
+.nav-link {
+  margin: 20px;
+  list-style-type: none;
+}
+
 /* Displays the site title */ 
 .site-title {
   text-shadow: 5px 5px rgb(82, 78, 78);
@@ -112,37 +134,20 @@
   background-color: black;
   border: white solid 5px;
   border-radius: 35px;
-  width: 550px;
-  height: 375px;
+  width: 600px;
+  height: 400px;
   transition: animation 0.5s ease-in-out;
 } 
 
 .picture:hover {
-  background-color: black;
-  border-radius: 35px;
-  width: 500px;
-  height: 325px;
   /* Apply the animation on hover */
   animation: smoothShrink 0.5s forwards;
+  /* background-color: black; */
+  border-radius: 50px;
 }
 
-/* NavBar Styling */
+/* Button Styling */
 
-.nav-bar-container {
+.redirect {
   background-color: white;
-  /* Centers NavBar */
-  margin: 0px;
-  padding: 0px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  /* Makes NavBar sticky */
-  position: sticky;
-  top: 0;
-}
-
-.nav-link {
-  margin: 20px;
-  list-style-type: none;
 }
