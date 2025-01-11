@@ -90,6 +90,7 @@
 .display-container-left {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 20px;
   width: 1200px;
   margin: 30px;
@@ -100,6 +101,7 @@
   display: flex;
   background-color: #4B4A4A;
   justify-content: space-around;
+  align-items: center;
   padding: 20px;
   width: 1200px;
   margin: 30px;
@@ -150,4 +152,5 @@
 
 .redirect {
   background-color: white;
+  color: black;
 }
