@@ -185,6 +185,7 @@
   /* Moves content direction downwards */
   flex-direction: column;
 }
+
 a {
   display: inline-block;
   padding: 10px 20px;

@@ -22,9 +22,7 @@ return (
                 And displays it
                 </p>
                 <a href="https://mls-dreammakers.github.io/random-users-app/">
-                    <button className="redirect">
-                        Click to view
-                    </button>
+                    Click to view
                 </a>
             </div>
       </div>
@@ -42,9 +40,7 @@ return (
                they appear in
             </p>
             <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-            <button className="redirect">
                 Click to view
-            </button>
             </a>
         </div>
         <div className="picture-div">
