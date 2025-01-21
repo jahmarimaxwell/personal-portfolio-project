@@ -54,22 +54,37 @@
 /* NavBar Styling */
 
 .nav-bar-container {
-  background-color: white;
+  /* background-color: white; */
   /* Centers NavBar */
   margin: 0px;
   padding: 0px;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   /* Makes NavBar sticky */
   position: sticky;
+  align-items: center;
   top: 0;
+}
+
+.nav-link-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
 }
 
 .nav-link {
   margin: 20px;
   list-style-type: none;
+}
+
+a:visited, a:focus {
+  color: white;
+}
+
+a:hover {
+  color: purple;
 }
 
 /* Displays the site title */ 
@@ -114,9 +129,24 @@
   margin: 30px;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Information for each picture */
 .information {
   font-size: 25px;
+}
+
+/* Button for each picture */
+.landing-button {
+  display: block;
+  background-color: black;
+  text-align: center;
+  width: 200px;
+  height: 50px;
 }
 
 /* Individual picture styling */
@@ -195,21 +225,4 @@
 
 .github-link {
   width: 400px;
-}
-
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  border-radius: 5px;
-
-}
-
-/* Creates glow around text */
-a:hover { 
-
 }

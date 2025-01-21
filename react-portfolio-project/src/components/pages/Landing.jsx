@@ -2,7 +2,6 @@ export default function LandingPage() {
     {/* UseState goes here */}
 return (
     <>
-    <h1 className="site-title">Jahmari's Portfolio</h1>
         <h3>Coming soon!</h3>
       {/* Display Container */}
       <div className="intro-div">
@@ -21,7 +20,7 @@ return (
                 (email, phone number, address)<br />
                 And displays it
                 </p>
-                <a href="https://mls-dreammakers.github.io/random-users-app/">
+                <a className="landing-button" href="https://mls-dreammakers.github.io/random-users-app/">
                     Click to view
                 </a>
             </div>
@@ -39,7 +38,7 @@ return (
                to be able to see which comic issue < br /> 
                they appear in
             </p>
-            <a href="https://github.com/React-API-Project/marvel-comic-react-project">
+            <a className="landing-button" href="https://github.com/React-API-Project/marvel-comic-react-project">
                 Click to view
             </a>
         </div>
