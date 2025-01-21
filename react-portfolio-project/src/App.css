@@ -184,6 +184,17 @@
   display: flex;
   /* Moves content direction downwards */
   flex-direction: column;
+  align-items: center;
+}
+
+.about-information {
+  display: flex;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.github-link {
+  width: 400px;
 }
 
 a {
@@ -192,14 +203,13 @@ a {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #3498db;
+  color: white;
+  background-color: black;
   border-radius: 5px;
-  box-shadow: 0 0 20px rgba(46, 146, 213, 0.7);
-  transition: box-shadow 0.3s;
+
 }
 
 /* Creates glow around text */
 a:hover { 
-  box-shadow: 0 0 30px rgba(22, 100, 152, 0.9);
+
 }
