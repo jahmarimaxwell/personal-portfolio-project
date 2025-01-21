@@ -140,6 +140,9 @@ a:hover {
   font-size: 25px;
 }
 
+.project-title {
+ margin: 0px;
+}
 /* Button for each picture */
 .landing-button {
   display: block;
