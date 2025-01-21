@@ -20,9 +20,11 @@ return (
                 (email, phone number, address)<br />
                 And displays it
                 </p>
-                <a className="landing-button" href="https://mls-dreammakers.github.io/random-users-app/">
-                    Click to view
-                </a>
+                <button className="landing-button">
+                    <a href="https://mls-dreammakers.github.io/random-users-app/">
+                        Click to view
+                    </a>
+                </button>
             </div>
       </div>
       <div className="display-container-right">
@@ -38,9 +40,11 @@ return (
                to be able to see which comic issue < br /> 
                they appear in
             </p>
-            <a className="landing-button" href="https://github.com/React-API-Project/marvel-comic-react-project">
-                Click to view
-            </a>
+            <button className="landing-button">
+                <a href="https://github.com/React-API-Project/marvel-comic-react-project">
+                    Click to view
+                </a>
+            </button>
         </div>
         <div className="picture-div">
              <img className="picture" src="\src\gifs\Marvel React API.gif"></img>

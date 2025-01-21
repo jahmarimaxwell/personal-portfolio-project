@@ -9,7 +9,9 @@ export default function About() {
                     projects and more.<br /> There will be many more to come.
                     I'll be including my technologies down below:
                     </div>
-                <a className="github-link" href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
+                <button className="github-link">
+                    <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
+                </button>
                 </div>
 
         </div>
