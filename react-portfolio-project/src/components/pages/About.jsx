@@ -1,3 +1,11 @@
+import htmlLogo from '../../assets/svg/html.svg'
+import cssLogo from '../../assets/svg/css.svg'
+import javascriptLogo from '../../assets/svg/javascript.svg'
+import viteLogo from '../../assets/svg/vite.svg'
+import githubLogo from '../../assets/svg/github.svg'
+import connectLogo from '../../assets/svg/connect.svg'
+
+
 export default function About() {
     return (
     <>
@@ -9,12 +17,26 @@ export default function About() {
                     projects and more.<br /> There will be many more to come.
                     I'll be including my technologies down below:
                     </div>
-                <button className="github-link">
-                    <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
-                </button>
+                    <button className="github-link">
+                        <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
+                    </button>
                 </div>
-
         </div>
+        <div class="tech-stack">
+        <p>Site created with: </p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                    <img src={htmlLogo} class="logo" alt="HTML logo"/>
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                    <img src={cssLogo} class="logo" alt="CSS logo"/>
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src={javascriptLogo} class="logo vanilla" alt="JavaScript logo" />
+                </a>
+                <a href="https://vitejs.dev" target="_blank">
+                    <img src= {viteLogo} class="logo" alt="Vite logo"/>
+                </a>              
+         </div>
     </>
     )
 }
