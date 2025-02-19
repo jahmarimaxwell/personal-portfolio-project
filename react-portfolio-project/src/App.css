@@ -84,7 +84,7 @@ a:visited, a:focus {
 }
 
 a:hover {
-  color: purple;
+  color: white;
 }
 
 /* Displays the site title */ 
@@ -137,12 +137,15 @@ a:hover {
 
 /* Information for each picture */
 .information {
+  /* display: flex; */
+  margin: 30px;
   font-size: 25px;
 }
 
 .project-title {
  margin: 0px;
 }
+
 /* Button for each picture */
 .landing-button {
   display: block;
