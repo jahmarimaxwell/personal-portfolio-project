@@ -2,14 +2,14 @@ export default function LandingPage() {
     {/* UseState goes here */}
 return (
     <>
-        <h3>Coming soon!</h3>
+      <h3>Coming soon!</h3>
       {/* Display Container */}
       <div className="intro-div">
 
       </div>
       <div className="display-container-left">
             <div className="picture-div">
-                <img className="picture" src="\src\gifs\Random User Generator App.gif"></img>
+                <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif"></img>
             </div>
             <div className="content">
                 <div className="information">
@@ -47,12 +47,12 @@ return (
             </button>
         </div>
         <div className="picture-div">
-             <img className="picture" src="\src\gifs\Marvel React API.gif"></img>
+             <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif"></img>
         </div>
       </div>
-      <div className="display-container-left">
+      {/* <div className="display-container-left">
             <div className="picture-div">
-                <img className="picture" src="\src\gifs\The Running Game.gif"></img>
+                <img className="picture" src="\src\gifs\The-Running-Game.gif"></img>
             </div>
            <div className="content">
                 <div className="information">
@@ -62,13 +62,13 @@ return (
                     first attempt at building a game<br />
                     Sample Picture.
                 </div>
-                <button className="landing-button">
-                    <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-                        Click to view
-                    </a>
-                </button>
+                <a href="../program/running_game.zip" download="running_game.zip">
+                    <button className="landing-button">
+                       Download File
+                    </button>
+                </a>
           </div>
-      </div>
+      </div> */}
     </>
     )
 }

@@ -2,15 +2,13 @@ import htmlLogo from '../../assets/svg/html.svg'
 import cssLogo from '../../assets/svg/css.svg'
 import javascriptLogo from '../../assets/svg/javascript.svg'
 import viteLogo from '../../assets/svg/vite.svg'
-import githubLogo from '../../assets/svg/github.svg'
-import connectLogo from '../../assets/svg/connect.svg'
 
 
 export default function About() {
     return (
     <>
         <div className="about-content">
-            <img className="portrait" src="/src/pictures/Professional Headshot.jpg"></img>
+            <img className="portrait" src="/personal-portfolio-project/Professional-Headshot.jpg"></img>
                 <div className="description">
                     <div className="about-information">
                     This is my About page. This will be the page where I display my 

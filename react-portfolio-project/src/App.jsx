@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/personal-portfolio-project/"> {/* So that the homepage is "Landing" */}
         <Header />
         <Routes>
           <Route path="/" element={<LandingPage />} />
