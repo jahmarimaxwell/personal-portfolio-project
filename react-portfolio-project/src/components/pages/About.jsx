@@ -8,7 +8,7 @@ export default function About() {
     return (
     <>
         <div className="about-content">
-            <img className="portrait" src="/personal-portfolio-project/Professional-Headshot.jpg"></img>
+            <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
                 <div className="description">
                     <div className="about-information">
                     This is my About page. This will be the page where I display my 
@@ -20,19 +20,19 @@ export default function About() {
                     </button>
                 </div>
         </div>
-        <div class="tech-stack">
+        <div className="tech-stack">
         <p>Site created with: </p>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                    <img src={htmlLogo} class="logo" alt="HTML logo"/>
+                    <img src={htmlLogo} className="logo" alt="HTML logo"/>
                 </a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                    <img src={cssLogo} class="logo" alt="CSS logo"/>
+                    <img src={cssLogo} className="logo" alt="CSS logo"/>
                 </a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                    <img src={javascriptLogo} class="logo vanilla" alt="JavaScript logo" />
+                    <img src={javascriptLogo} className="logo vanilla" alt="JavaScript logo" />
                 </a>
                 <a href="https://vitejs.dev" target="_blank">
-                    <img src= {viteLogo} class="logo" alt="Vite logo"/>
+                    <img src= {viteLogo} className="logo" alt="Vite logo"/>
                 </a>              
          </div>
     </>
