@@ -1,4 +1,9 @@
 /* //////// Index.css //////// */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -28,14 +33,14 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* place-items: center; */
-  /* min-width: 320px;
-  min-height: 100vh; */
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -87,7 +92,7 @@ button:focus-visible {
 
 #root {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* Makes root full length (leave commented) */
   /* max-width: 1280px; */
   /* Centers Page */
@@ -95,8 +100,11 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 0px;
+  /* padding: 0px; */
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 /* ///////// Continue Portfolio CSS ///////// */
@@ -186,6 +194,14 @@ a:hover {
   height: 700px;
   border-radius: 10px;
 }
+.intro-words {
+  margin: 15px;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+}
 
 /* Displays the introduction picture */
 .intro-div {
@@ -224,6 +240,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   margin: 50px;
+  width: 100%;
 }
 
 /* Information for each picture */
@@ -297,6 +314,7 @@ a:hover {
   display: flex;
   align-items: center;
   margin: 40px;
+  flex-direction: column;
 }
 
 /* Portrait Styling */
@@ -316,7 +334,7 @@ a:hover {
 
 .about-information {
   display: flex;
-  margin: 10px;
+  margin: 30px;
   font-size: 20px;
 }
 

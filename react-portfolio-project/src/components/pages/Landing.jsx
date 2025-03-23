@@ -2,12 +2,13 @@ export default function LandingPage() {
     {/* UseState goes here */}
 return (
     <>
-      <h3>Coming soon!</h3>
-      <h4>Scroll Down</h4>
+    <div className="intro-container">
+      <h3 className="intro-words">Coming soon!</h3>
+      <h4 className="intro-words">Scroll Down</h4>
       {/* Display Container */}
-      <div className="intro-div">
-
-      </div>
+      <div className="intro-div"></div>
+     </div>
+     
       <div className="display-container-left">
             <div className="picture-div">
                 <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif"></img>
