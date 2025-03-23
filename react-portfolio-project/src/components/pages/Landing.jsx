@@ -9,7 +9,7 @@ return (
         <div className="intro-div"></div>
      </div>
      
-      <div className="display-container-left">
+      <div className="display-container-black">
             <div className="picture-div">
                 <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif"></img>
             </div>
@@ -29,7 +29,7 @@ return (
                 </button>
             </div>
       </div>
-      <div className="display-container-right">
+      <div className="display-container-gray">
         <div className="picture-div">
              <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif"></img>
         </div>
@@ -52,16 +52,16 @@ return (
             </button>
         </div>
       </div>
-      {/* <div className="display-container-left">
+      <div className="display-container-black">
             <div className="picture-div">
-                <img className="picture" src="\src\gifs\The-Running-Game.gif"></img>
+                <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif"></img>
             </div>
            <div className="content">
                 <div className="information">
                 <strong><h2 className="project-title">The Running Game</h2></strong><br />
-                    A 2D Platformer aimed to replicate <br /> 
-                    old Flash Player games. This was my <br />
-                    first attempt at building a game<br />
+                    A 2D Platformer aimed to replicate  
+                    old Flash Player games. This was my 
+                    first attempt at building a game
                     Sample Picture.
                 </div>
                 <a href="../program/running_game.zip" download="running_game.zip">
@@ -70,7 +70,7 @@ return (
                     </button>
                 </a>
           </div>
-      </div> */}
+      </div>
     </>
     )
 }
