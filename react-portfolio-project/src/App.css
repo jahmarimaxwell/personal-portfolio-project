@@ -248,6 +248,7 @@ a:hover {
 /* Information for each picture */
 .information {
   /* display: flex; */
+  width: 450px;
   margin: 30px;
   font-size: 25px;
 }
@@ -335,11 +336,12 @@ a:hover {
   align-items: center;
 }
 
-.about-information {
+/* .about-information {
+  width: 100%;
   display: flex;
   margin: 30px;
   font-size: 20px;
-}
+} */
 
 .github-link {
   width: 400px;
@@ -366,8 +368,10 @@ a:hover {
     height: 300px;
     border-radius: 10px;
   }
-
   .github-link {
     width: 285px;
+  }
+  .information {
+    width: 100%
   }
 }

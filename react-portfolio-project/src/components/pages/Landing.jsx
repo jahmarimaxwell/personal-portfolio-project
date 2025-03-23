@@ -17,9 +17,9 @@ return (
                 <div className="information">
                 {/* title goes here */}{/* line breaks make space for div */}
                 <strong><h2 className="project-title">Random User Generator App</h2></strong><br />
-                This app demonstrates the use of an API<br />
-                Once refreshed, it grabs random information<br /> 
-                (email, phone number, address)<br />
+                This app demonstrates the use of an API
+                Once refreshed, it grabs random information 
+                (email, phone number, address)
                 And displays it
                 </div>
                 <button className="landing-button">
@@ -37,12 +37,12 @@ return (
             <div className="information">
                {/* title goes here */}{/* line breaks make space for div */}
                <strong><h2 className="project-title">Marvel World</h2></strong><br />
-               This App demonstrates the use of <strong>React</strong><br />
-               and the <strong>Marvel API</strong><br />
-                It allows you to search for any Marvel<br /> 
-               character and display their image,<br />
-               as well their description. It also allows you <br />
-               to be able to see which comic issue < br /> 
+               This App demonstrates the use of <strong> React </strong>
+               and the <strong> Marvel API</strong>.
+                It allows you to search for any Marvel
+               character and display their image,
+               as well their description. It also allows you
+               to be able to see which comic issue
                they appear in
             </div>
             <button className="landing-button">

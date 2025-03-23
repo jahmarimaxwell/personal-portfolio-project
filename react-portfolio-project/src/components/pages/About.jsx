@@ -10,7 +10,7 @@ export default function About() {
         <div className="about-content">
             <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
                 <div className="description">
-                    <div className="about-information">
+                    <div className="information">
                     This is my About page. This will be the page where I display my 
                     projects and more.<br /> There will be many more to come.
                     I'll be including my technologies down below:
