@@ -3,10 +3,10 @@ export default function LandingPage() {
 return (
     <>
     <div className="intro-container">
-      <h3 className="intro-words">Coming soon!</h3>
-      <h4 className="intro-words">Scroll Down</h4>
-      {/* Display Container */}
-      <div className="intro-div"></div>
+        <h3 className="intro-words">Coming soon!</h3>
+        <h4 className="intro-words">Scroll Down</h4>
+        {/* Display Container */}
+        <div className="intro-div"></div>
      </div>
      
       <div className="display-container-left">
