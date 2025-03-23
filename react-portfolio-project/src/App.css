@@ -1,19 +1,4 @@
-/* Main Website Styling */
-#root {
-  display: flex;
-  flex-direction: column;
-  /* Makes root full length (leave commented) */
-  /* max-width: 1280px; */
-  /* Centers Page */
-  margin: 0px auto;
-  padding: 2rem;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 0px;
-}
-
-/* //////// index.css //////// */
+/* //////// Index.css //////// */
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -23,6 +8,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+
+  display: flex;
+  flex-direction: column;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,9 +33,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 h1 {
@@ -75,6 +63,7 @@ button:focus-visible {
 }
 
 /* Displays the site icon */
+
 #site-icon {
   border-radius: 55px;
 }
@@ -94,7 +83,23 @@ button:focus-visible {
 }
 */
 
-/* /////// Continue Portfolio CSS /////// */
+/* /////////// Main Website Styling ///////////*/
+
+#root {
+  display: flex;
+  flex-direction: column;
+  /* Makes root full length (leave commented) */
+  /* max-width: 1280px; */
+  /* Centers Page */
+  margin: 0px auto;
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+}
+
+/* ///////// Continue Portfolio CSS ///////// */
 
 .logo {
   height: 6em;
@@ -132,7 +137,7 @@ button:focus-visible {
   color: #888;
 }
 
-/* /////// Website Styling ////////
+/* ///////// Content Website Styling ////////// */
 
 /* NavBar Styling */
 
@@ -194,6 +199,7 @@ a:hover {
 /* Displays pictures to the left */
 .display-container-left {
   display: flex;
+  flex-direction: column; /* changes direction */
   justify-content: space-around;
   align-items: center;
   padding: 20px;
@@ -204,6 +210,7 @@ a:hover {
 /* Displays pictures to the right */
 .display-container-right {
   display: flex;
+  flex-direction: column; /* changes direction */
   background-color: #4B4A4A;
   justify-content: space-around;
   align-items: center;
@@ -216,6 +223,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 50px;
 }
 
 /* Information for each picture */
@@ -262,7 +270,7 @@ a:hover {
   background-color: black;
   border: white solid 5px;
   border-radius: 35px;
-  width: 600px;
+  width: 800px;
   height: 400px;
   transition: animation 0.5s ease-in-out;
 } 
@@ -281,7 +289,7 @@ a:hover {
   color: black;
 }
 
-/* //////// About Page ////////
+/* //////// About Page //////// */
 
 /* About Container */
 

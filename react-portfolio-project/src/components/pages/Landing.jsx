@@ -3,6 +3,7 @@ export default function LandingPage() {
 return (
     <>
       <h3>Coming soon!</h3>
+      <h4>Scroll Down</h4>
       {/* Display Container */}
       <div className="intro-div">
 
@@ -28,6 +29,9 @@ return (
             </div>
       </div>
       <div className="display-container-right">
+        <div className="picture-div">
+             <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif"></img>
+        </div>
         <div className="content">
             <div className="information">
                {/* title goes here */}{/* line breaks make space for div */}
@@ -45,9 +49,6 @@ return (
                     Click to view
                 </a>
             </button>
-        </div>
-        <div className="picture-div">
-             <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif"></img>
         </div>
       </div>
       {/* <div className="display-container-left">
