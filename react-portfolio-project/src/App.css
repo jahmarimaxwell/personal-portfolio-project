@@ -313,6 +313,7 @@ a:hover {
 /* About Container */
 
 .about-content {
+  width: 100%;
   display: flex;
   align-items: center;
   margin: 40px;
@@ -359,5 +360,10 @@ a:hover {
     background-color: black;
     border: white solid 5px;
     border-radius: 35px;
+  }
+  .portrait {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
   }
 }
