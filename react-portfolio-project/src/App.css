@@ -366,4 +366,8 @@ a:hover {
     height: 300px;
     border-radius: 10px;
   }
+
+  .github-link {
+    width: 285px;
+  }
 }
