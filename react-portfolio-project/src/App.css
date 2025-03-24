@@ -152,11 +152,11 @@ button:focus-visible {
 .nav-bar-container {
   /* background-color: white; */
   /* Centers NavBar */
-  margin: 0px;
+  margin: 20px;
   padding: 0px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   /* Makes NavBar sticky */
   position: sticky;
