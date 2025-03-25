@@ -1,76 +1,102 @@
+import React, { useState, useEffect } from "react";
+
 export default function LandingPage() {
-    {/* UseState goes here */}
-return (
-    <>
-    <div className="intro-container">
-        <h3 className="intro-words">Coming soon!</h3>
-        <h4 className="intro-words">Scroll Down</h4>
-        {/* Display Container */}
-        <div className="intro-div"></div>
-     </div>
-     
-      <div className="display-container-black">
-            <div className="picture-div">
-                <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif"></img>
+    const [showScroll, setShowScroll] = useState(false);
+
+    // Detect scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                setShowScroll(true);
+            } else {
+                setShowScroll(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll back to top function
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    return (
+        <>
+            <div className="intro-container">
+                <h3 className="intro-words">Coming soon!</h3>
+                <h4 className="intro-words">Scroll Down</h4>
+                <div className="intro-div"></div>
             </div>
-            <div className="content">
-                <div className="information">
-                {/* title goes here */}{/* line breaks make space for div */}
-                <strong><h2 className="project-title">Random User Generator App</h2></strong><br />
-                This app demonstrates the use of an API
-                Once refreshed, it grabs random information 
-                (email, phone number, address)
-                And displays it
+
+            <div className="display-container-black">
+                <div className="picture-div">
+                    <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
                 </div>
-                <button className="landing-button">
-                    <a href="https://mls-dreammakers.github.io/random-users-app/">
-                        Click to view
-                    </a>
-                </button>
-            </div>
-      </div>
-      <div className="display-container-gray">
-        <div className="picture-div">
-             <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif"></img>
-        </div>
-        <div className="content">
-            <div className="information">
-               {/* title goes here */}{/* line breaks make space for div */}
-               <strong><h2 className="project-title">Marvel World</h2></strong><br />
-               This App demonstrates the use of <strong> React </strong>
-               and the <strong> Marvel API</strong>.
-                It allows you to search for any Marvel
-               character and display their image,
-               as well their description. It also allows you
-               to be able to see which comic issue
-               they appear in
-            </div>
-            <button className="landing-button">
-                <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-                    Click to view
-                </a>
-            </button>
-        </div>
-      </div>
-      <div className="display-container-black">
-            <div className="picture-div">
-                <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif"></img>
-            </div>
-           <div className="content">
-                <div className="information">
-                <strong><h2 className="project-title">The Running Game</h2></strong><br />
-                    A 2D Platformer aimed to replicate  
-                    old Flash Player games. This was my 
-                    first attempt at building a game
-                    Sample Picture.
-                </div>
-                <a href="../program/running_game.zip" download="running_game.zip">
+                <div className="content">
+                    <div className="information">
+                        <strong><h2 className="project-title">Random User Generator App</h2></strong><br />
+                        This app demonstrates the use of an API.
+                        Once refreshed, it grabs random information 
+                        (email, phone number, address)
+                        and displays it.
+                    </div>
                     <button className="landing-button">
-                       Download File
+                        <a href="https://mls-dreammakers.github.io/random-users-app/">
+                            Click to view
+                        </a>
                     </button>
-                </a>
-          </div>
-      </div>
-    </>
-    )
+                </div>
+            </div>
+
+            <div className="display-container-gray">
+                <div className="picture-div">
+                    <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
+                </div>
+                <div className="content">
+                    <div className="information">
+                        <strong><h2 className="project-title">Marvel World</h2></strong><br />
+                        This App demonstrates the use of <strong>React</strong>
+                        and the <strong>Marvel API</strong>.
+                        It allows you to search for any Marvel
+                        character and display their image,
+                        as well as their description. It also allows you
+                        to see which comic issue they appear in.
+                    </div>
+                    <button className="landing-button">
+                        <a href="https://github.com/React-API-Project/marvel-comic-react-project">
+                            Click to view
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div className="display-container-black">
+                <div className="picture-div">
+                    <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
+                </div>
+                <div className="content">
+                    <div className="information">
+                        <strong><h2 className="project-title">The Running Game</h2></strong><br />
+                        A 2D Platformer aimed to replicate  
+                        old Flash Player games. This was my 
+                        first attempt at building a game.
+                    </div>
+                    <a href="../program/running_game.zip" download="running_game.zip">
+                        <button className="landing-button">
+                            Download File
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            {/* Scroll-to-Top Button */}
+            {showScroll && (
+                <button className="scroll-to-top" onClick={scrollToTop}>
+                    ↑
+                </button>
+            )}
+        </>
+    );
 }

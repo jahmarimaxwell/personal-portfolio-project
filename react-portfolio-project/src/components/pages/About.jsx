@@ -2,9 +2,30 @@ import htmlLogo from '../../assets/svg/html.svg'
 import cssLogo from '../../assets/svg/css.svg'
 import javascriptLogo from '../../assets/svg/javascript.svg'
 import viteLogo from '../../assets/svg/vite.svg'
-
+import React, { useState, useEffect } from "react";
 
 export default function About() {
+      const [showScroll, setShowScroll] = useState(false);
+    
+        // Detect scroll position
+        useEffect(() => {
+            const handleScroll = () => {
+                if (window.scrollY > 300) {
+                    setShowScroll(true);
+                } else {
+                    setShowScroll(false);
+                }
+            };
+    
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
+    
+        // Scroll back to top function
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    
     return (
     <>
         <div className="about-content">
@@ -35,6 +56,13 @@ export default function About() {
                     <img src= {viteLogo} className="logo" alt="Vite logo"/>
                 </a>              
          </div>
+
+          {/* Scroll-to-Top Button */}
+          {showScroll && (
+                <button className="scroll-to-top" onClick={scrollToTop}>
+                    ↑
+                </button>
+            )}
     </>
     )
 }
