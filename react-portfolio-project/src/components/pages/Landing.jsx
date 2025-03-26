@@ -38,8 +38,8 @@ export default function LandingPage() {
     return (
         <>
             <div className="intro-container">
-                <h3 className="intro-words">Coming soon!</h3>
                 <h4 className="intro-words">Scroll Down</h4>
+                <h3 className="intro-words">Carousel Coming soon!</h3>
                 <div className="intro-div"></div>
             </div>
 
