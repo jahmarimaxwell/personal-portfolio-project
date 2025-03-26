@@ -51,7 +51,7 @@ export default function LandingPage() {
 
                 <div className="content">
                     <div className="information">
-                        <strong><h2 className="project-title">Random User Generator App</h2></strong><br />
+                        <strong><h2 className="project-title">Random User Generator App</h2></strong>
                         <p className={`info-text ${showInfo.randomUser ? "visible" : "hidden"}`}>
                             This app demonstrates the use of an API.
                             Once refreshed, it grabs random information 
@@ -80,9 +80,9 @@ export default function LandingPage() {
 
                 <div className="content">
                     <div className="information">
-                        <strong><h2 className="project-title">Marvel World</h2></strong><br />
+                        <strong><h2 className="project-title">Marvel World</h2></strong>
                         <p className={`info-text ${showInfo.marvelWorld ? "visible" : "hidden"}`}>
-                            This App demonstrates the use of <strong>React</strong>
+                            This App demonstrates the use of <strong>React </strong>
                             and the <strong>Marvel API</strong>.
                             It allows you to search for any Marvel
                             character and display their image,
@@ -111,7 +111,7 @@ export default function LandingPage() {
 
                 <div className="content">
                     <div className="information">
-                        <strong><h2 className="project-title">The Running Game</h2></strong><br />
+                        <strong><h2 className="project-title">The Running Game</h2></strong>
                         <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
                             A 2D Platformer aimed to replicate  
                             old Flash Player games. This was my 

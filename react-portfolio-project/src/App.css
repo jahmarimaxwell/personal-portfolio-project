@@ -259,7 +259,7 @@ a:hover {
 }
 
 .project-title {
- margin: 0px;
+ margin: 10px;
 }
 
 /* Button for each picture */
@@ -436,6 +436,7 @@ a:hover {
 
   .info-text.visible {
     display: block;
+    font-size: 20px;
   }
 
   .toggle-button {
@@ -445,7 +446,8 @@ a:hover {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
   }
 
