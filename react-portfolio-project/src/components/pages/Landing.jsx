@@ -123,7 +123,7 @@ export default function LandingPage() {
                         {showInfo.runningGame ? "Hide Info" : "Show Info"}
                     </button>
 
-                    <a href="../program/running_game.zip" download="running_game.zip">
+                    <a href="../programs/Running Game.zip" download="Running Game.zip">
                         <button className="landing-button">
                             Download File
                         </button>

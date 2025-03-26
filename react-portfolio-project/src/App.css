@@ -262,6 +262,10 @@ a:hover {
  margin: 10px;
 }
 
+.toggle-button {
+  margin: 20px;
+}
+
 /* Button for each picture */
 .landing-button {
   display: block;
@@ -398,6 +402,10 @@ a:hover {
 .github-link {
   width: 400px;
   margin: 20px;
+}
+
+.tech-stack {
+  width: 100%;
 }
 
 /* @media (max-width: 768px) {
