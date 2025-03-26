@@ -263,7 +263,7 @@ a:hover {
 }
 
 .toggle-button {
-  margin: 20px;
+  display: none; /* for website version */
 }
 
 /* Button for each picture */
@@ -273,6 +273,7 @@ a:hover {
   text-align: center;
   width: 200px;
   height: 50px;
+  margin-top: 20px;
 }
 
 /* Individual picture styling */
@@ -449,14 +450,15 @@ a:hover {
   }
 
   .toggle-button {
+    display: block;
     background-color: #000;
     color: #fff;
     border: none;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
   }
 
