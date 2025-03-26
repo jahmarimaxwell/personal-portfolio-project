@@ -369,7 +369,7 @@ a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 40px;
+  margin: 30px;
   flex-direction: column;
 }
 
@@ -397,6 +397,7 @@ a:hover {
 
 .github-link {
   width: 400px;
+  margin: 20px;
 }
 
 /* @media (max-width: 768px) {
