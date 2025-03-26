@@ -89,7 +89,6 @@ button:focus-visible {
 */
 
 /* /////////// Main Website Styling ///////////*/
-
 #root {
   display: flex;
   /* flex-direction: column; */
@@ -108,7 +107,6 @@ button:focus-visible {
 }
 
 /* ///////// Continue Portfolio CSS ///////// */
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -148,7 +146,6 @@ button:focus-visible {
 /* ///////// Content Website Styling ////////// */
 
 /* NavBar Styling */
-
 .nav-bar-container {
   /* background-color: white; */
   /* Centers NavBar */
@@ -272,7 +269,6 @@ a:hover {
   background-color: black;
   text-align: center;
   width: 200px;
-  height: 50px;
   margin-top: 20px;
 }
 
@@ -313,7 +309,6 @@ a:hover {
 }
 
 /* Button Styling */
-
 .redirect {
   background-color: white;
   color: black;
@@ -376,7 +371,6 @@ a:hover {
 /* //////// About Page //////// */
 
 /* About Container */
-
 .about-content {
   width: 100%;
   display: flex;
@@ -386,7 +380,6 @@ a:hover {
 }
 
 /* Portrait Styling */
-
 .portrait {
   margin: 10px;
 }
