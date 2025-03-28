@@ -123,13 +123,12 @@ export default function LandingPage() {
                         {showInfo.runningGame ? "Hide Info" : "Show Info"}
                     </button>
 
-                    {/* <a href="../programs/Running Game.zip" download="Running Game.zip"> */}
                     <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
                         <button className="landing-button">
                             Download for Mac
                         </button>
                     </a>
-                    {/* </a> */}
+             
                 </div>
             </div>
 

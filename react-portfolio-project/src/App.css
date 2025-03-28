@@ -162,17 +162,42 @@ button:focus-visible {
   top: 0;
 }
 
-.nav-link-container {
+/* Expand the line on hover */
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* .nav-link-container {
   display: flex;
   width: 200px;
+  gap: 20px;
   justify-content: space-around;
-}
+} */
 
 .nav-link {
   margin: 20px;
   list-style-type: none;
   text-shadow: 5px 5px rgb(82, 78, 78);
   /* Creates Shadows */
+}
+
+/* Creating the horizontal line */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Expand the line on hover */
+.nav-link:hover::after {
+  /* width: 100%; */
+  left: 0;
 }
 
 a:visited, a:focus {
