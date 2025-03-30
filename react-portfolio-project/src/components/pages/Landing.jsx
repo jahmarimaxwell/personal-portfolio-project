@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function LandingPage() {
     const [showScroll, setShowScroll] = useState(false);
@@ -34,13 +37,37 @@ export default function LandingPage() {
             [section]: !prevState[section],
         }));
     };
+    
+    // Carousel settings
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    };
+
 
     return (
         <>
             <div className="intro-container">
                 <h4 className="intro-words">Scroll Down</h4>
                 <h3 className="intro-words">Carousel Coming soon!</h3>
-                <div className="intro-div"></div>
+                <div className="intro-div">
+                    <Slider className="slider" {...settings}>
+                        <div className="slider-item">
+                            Sample
+                        </div>
+                        <div className="slider-item">
+                            For
+                        </div>
+                        <div className="slider-item">
+                            Carousel
+                        </div>
+                    </Slider>
+                </div>
             </div>
 
             {/* Random User Generator App */}
@@ -125,7 +152,7 @@ export default function LandingPage() {
 
                     <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
                         <button className="landing-button">
-                            Download for Mac
+                            Download for Mac (v1.0)
                         </button>
                     </a>
              

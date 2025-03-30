@@ -236,11 +236,26 @@ a:hover {
 
 /* Displays the introduction picture */
 .intro-div {
+  display: flex;
+  width: 100%; 
+  justify-content: center;
+}
+
+/* /// Carousel /// */
+.slider {
+  display: flex;
   background-color: black;
   width: 100%;
   height: 400px;
   margin: 40px;
   border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-item {
+  background-color: "white"; 
+  height: "200px";
 }
 
 /* Displays pictures to the left */
