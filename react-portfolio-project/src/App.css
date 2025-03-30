@@ -334,17 +334,17 @@ a:hover {
 
 .picture {
   border: white solid 5px;
-  border-radius: 20px;
-  width: 800px;
+  border-radius: 10px;
+  width: 700px;
   height: 400px;
-  transition: animation 0.5s ease-in-out;
+  transition: animation 1.0s ease-in-out;
 } 
 
 .picture:hover {
   /* Apply the animation on hover */
-  animation: smoothShrink 0.5s forwards;
+  animation: smoothShrink 1.0s forwards;
   /* background-color: black; */
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 /* Button Styling */
