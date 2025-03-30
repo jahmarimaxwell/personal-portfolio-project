@@ -295,7 +295,6 @@ a:hover {
   display: block;
   background-color: black;
   text-align: center;
-  width: 100%;
   margin-top: 20px;
 }
 
@@ -503,7 +502,7 @@ a:hover {
   }
 
   .scroll-to-top {
-    width: 70px;
+    width: 50px;
     height: 70px;
     font-size: 32px;
     bottom: 15px; /* Slightly lower for easy reach */
