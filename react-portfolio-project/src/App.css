@@ -502,15 +502,9 @@ a:hover {
   }
 
   .scroll-to-top {
-    width: 50px;
-    height: 70px;
+    height: 60px;
     font-size: 32px;
     bottom: 15px; /* Slightly lower for easy reach */
     right: 15px;
-  }
-
-  .scroll-to-top::before {
-    width: 50px;
-    height: 50px;
   }
 }
