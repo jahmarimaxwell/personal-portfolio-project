@@ -285,7 +285,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
+  margin: 20px;
   width: 100%;
 }
 
@@ -320,7 +320,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 
 /* Animation for shrinking images on hover */
@@ -334,9 +333,8 @@ a:hover {
 }
 
 .picture {
-  background-color: black;
   border: white solid 5px;
-  border-radius: 35px;
+  border-radius: 20px;
   width: 800px;
   height: 400px;
   transition: animation 0.5s ease-in-out;
@@ -346,7 +344,7 @@ a:hover {
   /* Apply the animation on hover */
   animation: smoothShrink 0.5s forwards;
   /* background-color: black; */
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 /* Button Styling */
@@ -472,6 +470,20 @@ a:hover {
     width: 100%;
   }
 
+  .picture {
+    border: 0px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+  } 
+  
+  .picture:hover {
+    display: block;
+    /* Removes hover animation*/
+    animation: smoothShrink 0.5s forwards;
+    border-radius: 10px;
+  }
+  
   .info-text {
     display: none;
   }
@@ -496,13 +508,6 @@ a:hover {
 
   .toggle-button:hover {
     background-color: #444;
-  }
-
-  .picture {
-    width: 100%;
-    background-color: black;
-    border: white solid 5px;
-    border-radius: 35px;
   }
 
   /* /// About /// */
