@@ -445,7 +445,14 @@ a:hover {
   }
 } */
 
-@media (max-width: 480px) {
+/* ////// Mobile properties ////// */
+
+@media (max-width: 480px) { 
+  /* /// Nav-Link /// */
+  .nav-link {
+    width: 100%;
+  }
+
   /* /// Landing /// */
   .information {
     width: 100%;
