@@ -176,10 +176,12 @@ button:focus-visible {
 } */
 
 .nav-link {
+  position: relative; /* Ensures ::after is relative to each link */
   margin: 20px;
   list-style-type: none;
   text-shadow: 5px 5px rgb(82, 78, 78);
   /* Creates Shadows */
+  padding-bottom: 10px; /* Adds spacing for the underline */
 }
 
 /* Creating the horizontal line */
@@ -293,7 +295,7 @@ a:hover {
   display: block;
   background-color: black;
   text-align: center;
-  width: 200px;
+  width: 100%;
   margin-top: 20px;
 }
 
