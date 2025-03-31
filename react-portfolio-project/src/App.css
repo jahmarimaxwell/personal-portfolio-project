@@ -325,7 +325,7 @@ a:hover {
 /* Animation for shrinking images on hover */
 @keyframes smoothShrink {
   from {
-    transform: scale(1); /* Original size */
+    transform: scale(1.5); /* Original size */
   }
   to {
     transform: scale(0.8); /* 80% of the original size */
@@ -479,6 +479,7 @@ a:hover {
   
   .picture:hover {
     /* display: block; */
+    width: 475px;
     /* Removes hover animation*/
     animation: smoothShrink 0.5s forwards;
     border-radius: 10px;
