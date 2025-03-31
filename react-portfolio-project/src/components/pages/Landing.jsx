@@ -59,13 +59,14 @@ export default function LandingPage() {
                 <h3 className="intro-words">Carousel Coming soon!</h3>
                 <div className="intro-div">
                     <Slider className="slider" {...settings}>
-                        <div className="slider-item">
+                        <div className="slider-item1">
+                            {/* <img src="/personal-portfolio-project/sample-pictures/Galaxy.jpg"></img> */}
                             Sample
                         </div>
-                        <div className="slider-item">
+                        <div className="slider-item2">
                             For
                         </div>
-                        <div className="slider-item">
+                        <div className="slider-item3">
                             Carousel
                         </div>
                     </Slider>

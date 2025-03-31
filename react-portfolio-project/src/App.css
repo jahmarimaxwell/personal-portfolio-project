@@ -251,9 +251,21 @@ a:hover {
   align-items: center;
 }
 
-.slider-item {
-  background-color: "white"; 
-  height: "200px";
+/* ////// Slider Item Containers ////// */
+.slider-item1, .slider-item2, .slider-item3 {
+/* height: 300px; */
+}
+
+.slider-item1 {
+ /* background-color: green; */
+}
+
+.slider-item2 {
+  /* background-color: blue; */
+}
+
+.slider-item3 {
+  /* background-color: lightgray; */
 }
 
 /* ////// Displays pictures ////// */
@@ -440,7 +452,7 @@ a:hover {
   animation: barberpole 0.5s linear infinite;
   /* ////////////////////// */
   border: solid #ccc 3px;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 @keyframes barberpole {
