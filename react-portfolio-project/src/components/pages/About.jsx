@@ -28,8 +28,11 @@ export default function About() {
     
     return (
     <>
-        <div className="about-content">
-            <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
+                <div className="about-content">
+                    <div className="portrait-holder">
+                        <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
+                    </div>
+          
                 <div className="description">
                     <div className="information">
                     This is my About page. This will be the page where I display my 
