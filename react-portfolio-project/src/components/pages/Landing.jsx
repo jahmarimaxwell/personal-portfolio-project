@@ -37,7 +37,7 @@ export default function LandingPage() {
             [section]: !prevState[section],
         }));
     };
-    
+
     // Carousel settings
     const settings = {
         dots: true,
@@ -71,7 +71,7 @@ export default function LandingPage() {
             </div>
 
             {/* Random User Generator App */}
-            <div className="display-container-black">
+            <div className="display-container">
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
                 </div>
@@ -100,7 +100,7 @@ export default function LandingPage() {
             </div>
 
             {/* Marvel World App */}
-            <div className="display-container-gray">
+            <div className="display-container">
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
                 </div>
@@ -131,7 +131,7 @@ export default function LandingPage() {
             </div>
 
             {/* Running Game */}
-            <div className="display-container-black">
+            <div className="display-container">
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
                 </div>
