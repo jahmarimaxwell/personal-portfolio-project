@@ -53,7 +53,9 @@ export default function LandingPage() {
     return (
         <>
             <div className="intro-container">
-                <h4 className="intro-words">Scroll Down</h4>
+                <h4 className="intro-words"> 
+                    <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
+                </h4>
                 <h3 className="intro-words">Carousel Coming soon!</h3>
                 <div className="intro-div">
                     <Slider className="slider" {...settings}>
@@ -124,7 +126,7 @@ export default function LandingPage() {
 
                     <button className="landing-button">
                         <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-                            Click to view
+                            Github Link
                         </a>
                     </button>
                 </div>

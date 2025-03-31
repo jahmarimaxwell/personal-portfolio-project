@@ -217,6 +217,10 @@ a:hover {
   /* Creates Shadows */
 }
 
+.arrow {
+  margin: 15px;
+}
+
 .intro-words {
   margin: 15px;
 }

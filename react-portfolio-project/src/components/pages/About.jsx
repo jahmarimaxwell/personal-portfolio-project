@@ -35,14 +35,13 @@ export default function About() {
           
                 <div className="description">
                     <div className="information">
-                    This is my About page. This will be the page where I display my 
-                    projects and more. There will be many more to come.
-                    I'll be including my technologies down below:
+                        <strong className="arrow">↓</strong>Github Link Below<strong className="arrow">↓</strong>
                     </div>
                     <button className="github-link">
                         <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
                     </button>
                 </div>
+                   <div className="email">jahmarimaxwell@gmail.com</div>
         </div>
         <div className="tech-stack">
         <p>Site created with: </p>
