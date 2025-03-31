@@ -478,7 +478,7 @@ a:hover {
   } 
   
   .picture:hover {
-    display: block;
+    /* display: block; */
     /* Removes hover animation*/
     animation: smoothShrink 0.5s forwards;
     border-radius: 10px;
