@@ -452,7 +452,7 @@ a:hover {
   animation: barberpole 0.5s linear infinite;
   /* ////////////////////// */
   border: solid #ccc 3px;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
 @keyframes barberpole {
@@ -572,6 +572,7 @@ a:hover {
 
   /* /// About /// */
   .portrait-holder {
+   border-radius: 50px;
    width: 100%;
   }
 
