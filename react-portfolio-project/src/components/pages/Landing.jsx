@@ -9,7 +9,7 @@ export default function LandingPage() {
         randomUser: false,
         marvelWorld: false,
         runningGame: false,
-        palettePicker: false
+        palettePicker: false,
     });
 
     // Detect scroll position
