@@ -178,8 +178,8 @@ export default function LandingPage() {
                         </p>
                     </div>
 
-                    <button className="toggle-button" onClick={() => toggleInfo("marvelWorld")}>
-                        {showInfo.marvelWorld ? "Hide Info" : "Show Info"}
+                    <button className="toggle-button" onClick={() => toggleInfo("palettePicker")}>
+                        {showInfo.palettePicker ? "Hide Info" : "Show Info"}
                     </button>
 
                     <button className="landing-button">
