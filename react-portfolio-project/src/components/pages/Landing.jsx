@@ -9,6 +9,7 @@ export default function LandingPage() {
         randomUser: false,
         marvelWorld: false,
         runningGame: false,
+        palettePicker: false
     });
 
     // Detect scroll position
@@ -159,6 +160,33 @@ export default function LandingPage() {
                         </button>
                     </a>
              
+                </div>
+            </div>
+
+            {/* Palette Picker */}
+            <div className="display-container">
+                <div className="picture-div">
+                    <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
+                </div>
+
+                <div className="content">
+                    <div className="information">
+                        <strong><h2 className="project-title">Palette Picker</h2></strong>
+                        <p className={`info-text ${showInfo.palettePicker ? "visible" : "hidden"}`}>
+                            Palette Picker lets you create a palette of 3 colors and 
+                            copy the hex code of colors on the palette.
+                        </p>
+                    </div>
+
+                    <button className="toggle-button" onClick={() => toggleInfo("marvelWorld")}>
+                        {showInfo.marvelWorld ? "Hide Info" : "Show Info"}
+                    </button>
+
+                    <button className="landing-button">
+                        <a href="https://jahmarimaxwell.github.io/palette-picker/">
+                            Click to view
+                        </a>
+                    </button>
                 </div>
             </div>
 
