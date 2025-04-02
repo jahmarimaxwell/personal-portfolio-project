@@ -127,8 +127,8 @@ export default function LandingPage() {
                     </button>
 
                     <button className="landing-button">
-                        <a href="https://github.com/React-API-Project/marvel-comic-react-project">
-                            Github Link
+                        <a href="https://react-api-project.github.io/marvel-comic-react-project/">
+                            Click to view
                         </a>
                     </button>
                 </div>
