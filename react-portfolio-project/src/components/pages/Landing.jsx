@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import TiltContainer from "../stylish/TiltContainer.jsx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,7 +58,7 @@ export default function LandingPage() {
                 <h4 className="intro-words"> 
                     <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
                 </h4>
-                <h3 className="intro-words">Carousel Coming soon!</h3>
+                <h3 className="intro-words">Carousel Coming Soon!</h3>
                 <div className="intro-div">
                     <Slider className="slider" {...settings}>
                         <div className="slider-item1">
@@ -75,7 +76,8 @@ export default function LandingPage() {
             </div>
 
             {/* Random User Generator App */}
-            <div className="display-container">
+                <TiltContainer>
+            {/* <div className="display-container"> */}
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
                 </div>
@@ -101,10 +103,12 @@ export default function LandingPage() {
                         </a>
                     </button>
                 </div>
-            </div>
+             {/* </div> */}
+            </TiltContainer>
 
             {/* Marvel World App */}
-            <div className="display-container">
+                <TiltContainer>
+            {/* <div className="display-container"> */}
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
                 </div>
@@ -132,10 +136,12 @@ export default function LandingPage() {
                         </a>
                     </button>
                 </div>
-            </div>
+            {/* </div> */}
+            </TiltContainer>
 
             {/* Running Game */}
-            <div className="display-container">
+                <TiltContainer>
+            {/* <div className="display-container"> */}
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
                 </div>
@@ -161,10 +167,12 @@ export default function LandingPage() {
                     </a>
              
                 </div>
-            </div>
+            {/* </div> */}
+            </TiltContainer>
 
             {/* Palette Picker */}
-            <div className="display-container">
+                <TiltContainer>
+            {/* <div className="display-container"> */}
                 <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
                 </div>
@@ -188,7 +196,8 @@ export default function LandingPage() {
                         </a>
                     </button>
                 </div>
-            </div>
+            {/* </div> */}
+            </TiltContainer>
 
             {/* Scroll-to-Top Button */}
             {showScroll && (

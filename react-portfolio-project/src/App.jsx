@@ -5,6 +5,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import Header from './components/header/Header';
 import LandingPage from './components/pages/Landing';
 import About from './components/pages/About';
+import NewPage from './components/pages/NewPage';
 // import './index.css'
 import './App.css'
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/new-page" element={<NewPage />} />
         </Routes>
       </HashRouter>
     </>
