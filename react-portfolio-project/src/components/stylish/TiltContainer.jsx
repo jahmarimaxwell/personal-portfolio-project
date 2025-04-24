@@ -1,10 +1,26 @@
-import React, { useEffect, useRef } from "react";
-// import "./TiltContainer.css"; // optional: if you want to define styles like .display-container
+import React, { useEffect, useRef, useState } from "react";
 
 export default function TiltContainer({ children }) {
     const containerRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Check screen size on load
+        const checkMobile = () => {
+            setIsMobile(window.matchMedia("(max-width: 480px)").matches);
+        };
+
+        checkMobile(); // Initial check
+        window.addEventListener("resize", checkMobile);
+
+        return () => {
+            window.removeEventListener("resize", checkMobile);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) return; // Skip tilt behavior on mobile
+
         const el = containerRef.current;
         if (!el) return;
 
@@ -42,10 +58,14 @@ export default function TiltContainer({ children }) {
             el.removeEventListener("mousedown", clickTransform);
             el.removeEventListener("mouseup", releaseTransform);
         };
-    }, []);
+    }, [isMobile]);
 
     return (
-        <div ref={containerRef} className="display-container">
+        <div
+            ref={containerRef}
+            className="tilt-container"
+            style={{ transform: isMobile ? "none" : undefined }}
+        >
             {children}
         </div>
     );
