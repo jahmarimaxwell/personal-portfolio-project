@@ -108,9 +108,11 @@ export default function LandingPage() {
 
             {/* Marvel World App */}
             <div className="display-container">
-                <div className="picture-div">
+                {/* <div className="picture-div"> */}
+                <TiltContainer> 
                     <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
-                </div>
+                </TiltContainer> 
+                {/* </div> */}
 
                 <div className="content">
                     <div className="information">
@@ -139,9 +141,11 @@ export default function LandingPage() {
 
             {/* Running Game */}
             <div className="display-container">
-                <div className="picture-div">
+                {/* <div className="picture-div"> */}
+                <TiltContainer> 
                     <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
-                </div>
+                </TiltContainer> 
+                {/* </div> */}
 
                 <div className="content">
                     <div className="information">
@@ -168,9 +172,11 @@ export default function LandingPage() {
 
             {/* Palette Picker */}
             <div className="display-container">
-                <div className="picture-div">
+                {/* <div className="picture-div"> */}
+                <TiltContainer> 
                     <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
-                </div>
+                </TiltContainer> 
+                {/* </div> */}
 
                 <div className="content">
                     <div className="information">
