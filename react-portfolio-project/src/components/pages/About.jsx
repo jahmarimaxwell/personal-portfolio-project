@@ -3,6 +3,7 @@ import cssLogo from '../../assets/svg/css.svg'
 import javascriptLogo from '../../assets/svg/javascript.svg'
 import viteLogo from '../../assets/svg/vite.svg'
 import React, { useState, useEffect } from "react";
+import TiltContainer from "../stylish/TiltContainer.jsx";
 
 export default function About() {
       const [showScroll, setShowScroll] = useState(false);
@@ -30,7 +31,9 @@ export default function About() {
     <>
                 <div className="about-content">
                     <div className="portrait-holder">
+                        <TiltContainer> 
                         <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
+                        </TiltContainer> 
                     </div>
           
                 <div className="description">
