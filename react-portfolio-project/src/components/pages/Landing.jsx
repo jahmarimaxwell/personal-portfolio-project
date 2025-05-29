@@ -76,13 +76,12 @@ export default function LandingPage() {
             </div>
 
             {/* Random User Generator App */}
-                {/* <TiltContainer> */}
-            <div className="display-container">
-                {/* <div className="picture-div"> */}
-                <TiltContainer> 
+            <TiltContainer>
+            <div className="display-container"> 
+                <div className="picture-div"> 
                     <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
-                </TiltContainer> 
-                {/* </div> */}
+                </div>
+
                 <div className="content">
                     <div className="information">
                         <strong><h2 className="project-title">Random User Generator App</h2></strong>
@@ -104,15 +103,15 @@ export default function LandingPage() {
                         </a>
                     </button>
                 </div>
-             </div>
+            </div>
+            </TiltContainer>
 
             {/* Marvel World App */}
+            <TiltContainer>
             <div className="display-container">
-                {/* <div className="picture-div"> */}
-                <TiltContainer> 
+                <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
-                </TiltContainer> 
-                {/* </div> */}
+                </div>
 
                 <div className="content">
                     <div className="information">
@@ -138,14 +137,14 @@ export default function LandingPage() {
                     </button>
                 </div>
             </div>
+            </TiltContainer>
 
             {/* Running Game */}
+            <TiltContainer>
             <div className="display-container">
-                {/* <div className="picture-div"> */}
-                <TiltContainer> 
+                <div className="picture-div">
                     <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
-                </TiltContainer> 
-                {/* </div> */}
+                </div>
 
                 <div className="content">
                     <div className="information">
@@ -169,14 +168,14 @@ export default function LandingPage() {
              
                 </div>
             </div>
-
+            </TiltContainer>
+            
             {/* Palette Picker */}
+            <TiltContainer> 
             <div className="display-container">
-                {/* <div className="picture-div"> */}
-                <TiltContainer> 
+                <div className="picture-div"> 
                     <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
-                </TiltContainer> 
-                {/* </div> */}
+                </div>
 
                 <div className="content">
                     <div className="information">
@@ -198,6 +197,7 @@ export default function LandingPage() {
                     </button>
                 </div>
             </div>
+            </TiltContainer> 
 
             {/* Scroll-to-Top Button */}
             {showScroll && (

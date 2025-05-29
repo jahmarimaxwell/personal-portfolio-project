@@ -68,7 +68,6 @@ button:focus-visible {
 }
 
 /* Displays the site icon */
-
 #site-icon {
   border-radius: 55px;
 }
@@ -96,7 +95,7 @@ button:focus-visible {
   /* max-width: 1280px; */
   /* Centers Page */
   margin: 0px auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -272,7 +271,6 @@ a:hover {
   position: relative;
   flex-direction: column; /* changes direction */
   /* background-color: #4B4A4A; */
-  background-image: repeating-linear-gradient(135deg, #ccc, #ccc 10px, #242424 10px, #242424 20px);
   justify-content: space-around;
   align-items: center;
   padding: 20px;
@@ -282,10 +280,10 @@ a:hover {
   border: solid #ccc 3px;
   border-radius: 15px;
   /* Creates Striped Lines */
-  background-size: 30px 30px;
+  /* background-size: 30px 30px;
   transition: opacity 0.3s ease;
-  background-image: linear-gradient(45deg, #ccc, 25%, transparent 25%, transparent 50%, #ccc, 50%, #ccc, 75%, transparent 75%, transparent);
-  animation: barberpole 0.5s linear infinite;
+  background-image: linear-gradient(45deg, #ccc, 25%, transparent 25%, transparent 50%, #ccc, 50%, #ccc, 75%, transparent 75%, transparent); */
+  /* animation: barberpole 0.5s linear infinite; */
   /* For TiltContainer.jsx */
   transition: box-shadow 0.1s, transform 0.1s;
 }
@@ -452,10 +450,10 @@ a:hover {
   justify-content: center;
   width: 100%;
   /* Creates Striped Lines */
-  background-size: 30px 30px;
+  /* background-size: 30px 30px;
   transition: opacity 0.3s ease;
   background-image: linear-gradient(45deg, #ccc, 25%, transparent 25%, transparent 50%, #ccc, 50%, #ccc, 75%, transparent 75%, transparent);
-  animation: barberpole 0.5s linear infinite;
+  animation: barberpole 0.5s linear infinite; */
   /* ////////////////////// */
   border: solid #ccc 3px;
   border-radius: 100px;
