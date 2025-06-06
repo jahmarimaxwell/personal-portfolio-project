@@ -227,6 +227,8 @@ a:hover {
 
 /* Displays the introduction picture */
 .intro-div {
+  /* background-color: white; */
+  padding: 10px;
   display: flex;
   width: 100%; 
   justify-content: center;
@@ -242,6 +244,9 @@ a:hover {
   border-radius: 25px;
   justify-content: center;
   align-items: center;
+}
+.slick-slider {
+  margin: 0px;
 }
 
 /* ////// Slider Item Containers ////// */
@@ -262,8 +267,17 @@ a:hover {
 }
 
 .tilt-container {
+  display: flex;
   width: 100%;
-}
+  justify-content: center;
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+ }
+  
+  .tilt-container * {
+    pointer-events: auto;
+  }
 
 /* ////// Displays pictures ////// */
 .display-container {

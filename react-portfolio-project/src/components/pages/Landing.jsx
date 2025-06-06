@@ -53,7 +53,7 @@ export default function LandingPage() {
 
 
     return (
-        <>
+        <> 
             <div className="intro-container">
                 <h4 className="intro-words"> 
                     <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
@@ -96,7 +96,7 @@ export default function LandingPage() {
                     <button className="toggle-button" onClick={() => toggleInfo("randomUser")}>
                         {showInfo.randomUser ? "Hide Info" : "Show Info"}
                     </button>
-
+                    
                     <button className="landing-button">
                         <a href="https://mls-dreammakers.github.io/random-users-app/">
                             Click to view
@@ -160,11 +160,11 @@ export default function LandingPage() {
                         {showInfo.runningGame ? "Hide Info" : "Show Info"}
                     </button>
 
-                    <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
                         <button className="landing-button">
-                            Download for Mac (v1.0)
+                            <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
+                                Download for Mac (v1.0)
+                            </a>
                         </button>
-                    </a>
              
                 </div>
             </div>
