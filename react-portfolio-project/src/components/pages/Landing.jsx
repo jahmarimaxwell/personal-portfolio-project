@@ -75,7 +75,9 @@ export default function LandingPage() {
                 </div>
             </div>
 
+    <div className="project-heading">
         {/* <h1 className="projects">Projects</h1> */}
+    </div>
 
         <div className="section-scroll">
             {/* Random User Generator App */}
