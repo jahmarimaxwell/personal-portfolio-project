@@ -2,6 +2,7 @@ import htmlLogo from '../../assets/svg/html.svg'
 import cssLogo from '../../assets/svg/css.svg'
 import javascriptLogo from '../../assets/svg/javascript.svg'
 import viteLogo from '../../assets/svg/vite.svg'
+import reactLogo from '../../assets/svg/react.svg'
 import React, { useState, useEffect } from "react";
 import TiltContainer from "../stylish/TiltContainer.jsx";
 
@@ -44,10 +45,10 @@ export default function About() {
                         <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
                     </button>
                 </div>
-                   <div className="email">jahmarimaxwell@gmail.com</div>
+                   <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
         </div>
         <div className="tech-stack">
-        <p>Site created with: </p>
+        <p><strong>Proficient in</strong></p>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
                     <img src={htmlLogo} className="logo" alt="HTML logo"/>
                 </a>
@@ -59,7 +60,8 @@ export default function About() {
                 </a>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src= {viteLogo} className="logo" alt="Vite logo"/>
-                </a>              
+                </a>
+                <img src= {reactLogo} className="logo" alt="React logo"/>                         
          </div>
 
           {/* Scroll-to-Top Button */}

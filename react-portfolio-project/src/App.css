@@ -156,9 +156,7 @@ button:focus-visible {
   justify-content: space-evenly;
   width: 100%;
   /* Makes NavBar sticky */
-  position: sticky;
   align-items: center;
-  top: 0;
   z-index: 0; /* Lower than content */
 }
 
@@ -235,18 +233,21 @@ a:hover {
 }
 
 /* /// Carousel /// */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+}
+
 .slider {
   display: flex;
   background-color: black;
   width: 100%;
   height: 400px;
-  margin: 40px;
+  margin: 60px;
   border-radius: 25px;
   justify-content: center;
   align-items: center;
-}
-.slick-slider {
-  margin: 0px;
 }
 
 /* ////// Slider Item Containers ////// */
@@ -266,6 +267,30 @@ a:hover {
   /* background-color: lightgray; */
 }
 
+.stopper {
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  margin: 20px;
+}
+ 
+.projects {
+  margin-bottom: 100px;
+  border-bottom: 5px solid #fff; /* adjust thickness and color */
+  padding-bottom: 2rem; /* spacing between text and line */
+}
+
+/* Scroll Container */
+.section-scroll {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  padding-top: 80px; /* Match the navbar height */
+}
+
+/* Container for tilt effect */
 .tilt-container {
   display: flex;
   width: 100%;
@@ -275,24 +300,30 @@ a:hover {
   will-change: transform;
  }
   
-  .tilt-container * {
+ .tilt-container * {
     pointer-events: auto;
-  }
+ }
 
 /* ////// Displays pictures ////// */
 .display-container {
   display: flex;
   position: relative;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto; /* if your content may exceed screen height */
+  /* position: sticky; */
   flex-direction: column; /* changes direction */
   /* background-color: #4B4A4A; */
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  width: 1200px;
+  /* width: 1200px; */
+  /* width: 100%; */
   /* height: 900px; */
   margin: 30px;
-  border: solid #ccc 3px;
-  border-radius: 15px;
+  /* border-bottom: solid #ccc 10px; */
+  /* border-radius: 15px; */
   /* Creates Striped Lines */
   /* background-size: 30px 30px;
   transition: opacity 0.3s ease;
@@ -334,14 +365,33 @@ a:hover {
 }
 
 .info-text {
+  display: none;
   background-color: black;
   color: white;
   padding: 10px;
   border-radius: 10px;
 }
 
+.info-text.visible {
+  display: block;
+  font-size: 20px;
+}
+
 .toggle-button {
-  display: none; /* for website version */
+  display: block;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.toggle-button:hover {
+  background-color: #444;
 }
 
 /* Button for each picture */
@@ -350,6 +400,11 @@ a:hover {
   background-color: black;
   text-align: center;
   margin-top: 20px;
+}
+
+.picture-div,
+.content {
+  z-index: 1;
 }
 
 /* Individual picture styling */
@@ -469,8 +524,8 @@ a:hover {
   background-image: linear-gradient(45deg, #ccc, 25%, transparent 25%, transparent 50%, #ccc, 50%, #ccc, 75%, transparent 75%, transparent);
   animation: barberpole 0.5s linear infinite; */
   /* ////////////////////// */
-  border: solid #ccc 3px;
-  border-radius: 100px;
+  /* border: solid #ccc 3px;
+  border-radius: 100px; */
 }
 
  /* Creates Spiraling Effect */
@@ -562,32 +617,6 @@ a:hover {
   .picture:hover {
     /* transform: scale(2);
     height: 300px; */
-  }
-  
-  .info-text {
-    display: none;
-  }
-
-  .info-text.visible {
-    display: block;
-    font-size: 20px;
-  }
-
-  .toggle-button {
-    display: block;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-
-  .toggle-button:hover {
-    background-color: #444;
   }
 
   /* /// About /// */
