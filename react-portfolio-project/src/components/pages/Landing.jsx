@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import TiltContainer from "../stylish/TiltContainer.jsx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,24 +13,27 @@ export default function LandingPage() {
         palettePicker: false,
     });
 
-    // Detect scroll position
+    
+    const sectionScrollRef = useRef(null);
+
+    // Scroll-to-top detection
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setShowScroll(true);
-            } else {
-                setShowScroll(false);
-            }
+            setShowScroll(window.scrollY > 300);
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Scroll back to top function
+    // Button scroll to projects
+    const scrollToProjects = () => {
+        sectionScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
 
     // Toggle visibility for each info section independently
     const toggleInfo = (section) => {
@@ -50,7 +53,6 @@ export default function LandingPage() {
         autoplay: true,
         autoplaySpeed: 2000,
     };
-
 
     return (
         <> 
@@ -73,13 +75,20 @@ export default function LandingPage() {
                         </div>
                     </Slider>
                 </div>
+                <div className="project-heading">
+                    <h1 className="projects">Projects</h1>
+                </div>
+                <div className="project-button-container">
+                <strong className="arrow">↓</strong>   
+                    <button className="project-button" onClick={scrollToProjects}>
+                            View Projects
+                    </button>
+                <strong className="arrow">↓</strong>
+                </div>
             </div>
 
-    <div className="project-heading">
-        {/* <h1 className="projects">Projects</h1> */}
-    </div>
 
-        <div className="section-scroll">
+        <div className="section-scroll" ref={sectionScrollRef}>
             {/* Random User Generator App */}
             <div className="display-container"> 
                 <TiltContainer>
