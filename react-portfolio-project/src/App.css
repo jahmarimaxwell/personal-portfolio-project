@@ -190,7 +190,7 @@ button:focus-visible {
 
 /* Expand the line on hover */
 .nav-link:hover::after {
-  /* width: 100%; */
+  width: 100%; /* Enables white line */
   left: 0;
 }
 
@@ -221,15 +221,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Displays the introduction picture */
-.intro-div {
-  /* background-color: white; */
-  padding: 10px;
-  display: flex;
-  width: 100%; 
-  justify-content: center;
 }
 
 /* /// Carousel /// */
@@ -267,6 +258,16 @@ a:hover {
   /* background-color: lightgray; */
 }
 
+.personal-description {
+  display: flex;
+  font-size: 25px;
+  width: 800px;
+  margin: 50px;
+  padding: 30px;
+  border: 5px white solid;
+  border-radius: 20px;
+}
+
 .stopper {
   background-color: black;
   height: 300px;
@@ -276,10 +277,26 @@ a:hover {
 
 .project-heading {
   display: flex;
-  margin-bottom: 100px;
   border-bottom: 5px solid #fff; /* adjust thickness and color */
   padding-bottom: 2rem; /* spacing between text and line */
 }
+
+.project-button-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: white; */
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  margin-bottom: 80px;
+}
+
+.project-button {
+font-size: 40px;
+color: white;
+}
+
 
 /* Scroll Container */
 .section-scroll {
@@ -319,11 +336,11 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  margin: 30px;
   /* width: 1200px; */
   /* width: 100%; */
   /* height: 900px; */
-  margin: 30px;
-  border-bottom: solid #ccc 10px;
+  /* border-bottom: solid #ccc 10px; */
   /* border-radius: 15px; */
   /* Creates Striped Lines */
   /* background-size: 30px 30px;
@@ -398,19 +415,9 @@ a:hover {
 .toggle-button:hover {
   background-color: #444;
 }
-
-.project-button-container {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    /* background-color: white; */
-    justify-content: center;
-    align-items: center;
-}
-
-.project-button {
- font-size: 40px;
- color: white;
+/* Running Game Header */
+.running-game-lead {
+  font-size: 25px;
 }
 
 /* Button for each picture */
@@ -528,8 +535,9 @@ a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 30px;
-  flex-direction: column;
+  /* margin: 30px; */
+  padding: 60px;
+  flex-direction: row;
 }
 
 /* Portrait Styling */
@@ -565,6 +573,14 @@ a:hover {
   border-radius: 10px;
 }
 
+.email {
+  margin: 20px;
+}
+
+.information {
+  margin: 10px;
+}
+
 /* Description Styling */
 .description {
   margin: 10px;
@@ -572,6 +588,7 @@ a:hover {
   /* Moves content direction downwards */
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 /* .about-information {
@@ -587,6 +604,7 @@ a:hover {
 }
 
 .tech-stack {
+  margin: 20px;
   width: 100%;
 }
 
@@ -641,6 +659,7 @@ a:hover {
   
   /* /// Slider /// */
   .slider-container {
+    padding: 30px;
     width: 100%;
   }
 
@@ -650,6 +669,11 @@ a:hover {
   }
 
   /* /// About /// */
+  .about-content {
+    padding: 10px;
+    flex-direction: column;
+  }
+
   .portrait-holder {
    border-radius: 50px;
    width: 100%;

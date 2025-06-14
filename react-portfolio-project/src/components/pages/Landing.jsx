@@ -75,6 +75,18 @@ export default function LandingPage() {
                         </div>
                     </Slider>
                 </div>
+
+                <div className="personal-description">
+                    <h4>I'm a passionate website developer in the making, 
+                    constantly striving to grow my skills and create meaningful 
+                    digital experiences. With a strong foundation in HTML, CSS, and JavaScript, 
+                    I'm driven by curiosity and a desire to build clean, responsive, 
+                    and user-friendly websites. Whether it's designing a sleek portfolio or solving bugs in complex layouts, 
+                    I approach each challenge as a chance to learn and improve. 
+                    I believe in the power of collaboration, perseverance, and continuous learning 
+                    as I work toward becoming a confident and creative full-stack developer.
+                    </h4>
+                </div>
                 <div className="project-heading">
                     <h1 className="projects">Projects</h1>
                 </div>
@@ -92,9 +104,11 @@ export default function LandingPage() {
             {/* Random User Generator App */}
             <div className="display-container"> 
                 <TiltContainer>
-                <div className="picture-div"> 
-                    <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
-                </div>
+                <a href="https://mls-dreammakers.github.io/random-users-app/">      
+                    <div className="picture-div"> 
+                        <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
+                    </div>
+                </a>
                 </TiltContainer>
 
                 <div className="content">
@@ -112,11 +126,6 @@ export default function LandingPage() {
                         {showInfo.randomUser ? "Hide Info" : "Show Info"}
                     </button>
                     
-                    <button className="landing-button">
-                        <a href="https://mls-dreammakers.github.io/random-users-app/">
-                            Click to view
-                        </a>
-                    </button>
                 </div>
             </div>
             
@@ -124,9 +133,11 @@ export default function LandingPage() {
             {/* Marvel World App */}
             <div className="display-container">
                 <TiltContainer>
-                <div className="picture-div">
-                    <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
-                </div>
+                <a href="https://react-api-project.github.io/marvel-comic-react-project/">
+                    <div className="picture-div">
+                        <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
+                    </div>
+                </a>
                 </TiltContainer>
 
                 <div className="content">
@@ -145,24 +156,21 @@ export default function LandingPage() {
                     <button className="toggle-button" onClick={() => toggleInfo("marvelWorld")}>
                         {showInfo.marvelWorld ? "Hide Info" : "Show Info"}
                     </button>
-
-                    <button className="landing-button">
-                        <a href="https://react-api-project.github.io/marvel-comic-react-project/">
-                            Click to view
-                        </a>
-                    </button>
                 </div>
             </div>
 
             {/* Running Game */}
             <div className="display-container">
                 <TiltContainer>
-                <div className="picture-div">
-                    <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
-                </div>
+                <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
+                    <div className="picture-div">
+                        <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
+                    </div>
+                </a>
                 </TiltContainer>
 
                 <div className="content">
+                    <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p> 
                     <div className="information">
                         <strong><h2 className="project-title">The Running Game</h2></strong>
                         <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
@@ -175,22 +183,17 @@ export default function LandingPage() {
                     <button className="toggle-button" onClick={() => toggleInfo("runningGame")}>
                         {showInfo.runningGame ? "Hide Info" : "Show Info"}
                     </button>
-
-                        <button className="landing-button">
-                            <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
-                                Download for Mac (v1.0)
-                            </a>
-                        </button>
-             
                 </div>
             </div>
             
             {/* Palette Picker */} 
             <div className="display-container">
                 <TiltContainer>
-                <div className="picture-div"> 
-                    <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
-                </div>
+                <a href="https://jahmarimaxwell.github.io/palette-picker/">
+                    <div className="picture-div"> 
+                        <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
+                    </div>
+                </a>
                 </TiltContainer>
 
                 <div className="content">
@@ -204,12 +207,6 @@ export default function LandingPage() {
 
                     <button className="toggle-button" onClick={() => toggleInfo("palettePicker")}>
                         {showInfo.palettePicker ? "Hide Info" : "Show Info"}
-                    </button>
-
-                    <button className="landing-button">
-                        <a href="https://jahmarimaxwell.github.io/palette-picker/">
-                            Click to view
-                        </a>
                     </button>
                 </div>
             </div>
