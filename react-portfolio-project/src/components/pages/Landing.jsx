@@ -61,11 +61,11 @@ export default function LandingPage() {
                     <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
                 </h4>
                 <h3 className="intro-words">Carousel Coming Soon!</h3>
-                <div className="slider-container">
+                {/* <div className="slider-container">
                     <Slider className="slider" {...settings}>
-                        <div className="slider-item1">
+                        <div className="slider-item1"> */}
                             {/* <img src="/personal-portfolio-project/sample-pictures/Galaxy.jpg"></img> */}
-                            Sample
+                            {/* Sample
                         </div>
                         <div className="slider-item2">
                             For
@@ -74,7 +74,7 @@ export default function LandingPage() {
                             Carousel
                         </div>
                     </Slider>
-                </div>
+                </div> */}
 
                 <div className="personal-description">
                     <h4>I'm a passionate website developer in the making, 

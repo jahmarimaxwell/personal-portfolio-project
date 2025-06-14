@@ -32,19 +32,16 @@ export default function About() {
     <>
             <div className="about-content">
                     <div className="portrait-holder">
-                        <TiltContainer> 
-                        <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
-                        </TiltContainer> 
+                        <a href="https://github.com/jahmarimaxwell">
+                            <TiltContainer> 
+                            <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
+                            </TiltContainer> 
+                        </a>
                     </div>
           
                 <div className="description">
-                            <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
-                                <div className="information">
-                                    <strong className="arrow">↓</strong>Github Link Below<strong className="arrow">↓</strong>
-                                </div>
-                                <button className="github-link">
-                                    <a href="https://github.com/jahmarimaxwell">jahmarimaxwell</a>
-                                </button>
+                        <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
+                
                         <div className="tech-stack">
                             <p><strong>Proficient in</strong></p>
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
@@ -59,7 +56,9 @@ export default function About() {
                                     <a href="https://vitejs.dev" target="_blank">
                                         <img src= {viteLogo} className="logo" alt="Vite logo"/>
                                     </a>
-                                    <img src= {reactLogo} className="logo" alt="React logo"/>                         
+                                    <a href="https://react.dev" target="_blank">
+                                    <img src= {reactLogo} className="logo spin" alt="React logo"/>
+                                    </a>                         
                         </div>
                 </div>
             </div>
