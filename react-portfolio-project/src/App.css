@@ -354,10 +354,14 @@ a:hover {
   margin: 15px;
 }
 
+.intro-container-holder {
+  display: flex;
+}
+
 .intro-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -400,7 +404,7 @@ a:hover {
   display: flex;
   font-size: 25px;
   width: 800px;
-  margin: 50px;
+  margin: 30px;
   padding: 30px;
   /* border: 5px white solid; */
   /* border-radius: 20px; */
@@ -411,6 +415,14 @@ a:hover {
   height: 300px;
   width: 100%;
   margin: 20px;
+}
+
+.project-section-container {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-heading {
@@ -443,8 +455,8 @@ a:hover {
 }
 
 .project-button {
-  width: 500px;
-  font-size: 35px;
+  width: 450px;
+  font-size: 30px;
   background-color: white;
   color: black;
   animation: pulse 2.5s ease-in-out infinite;
@@ -487,8 +499,8 @@ a:hover {
   /* background-color: #4B4A4A; */
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
-  margin: 30px;
+  padding: 50px;
+  /* margin: 30px; */
   /* width: 1200px; */
   /* width: 100%; */
   /* height: 900px; */
@@ -786,6 +798,10 @@ a:hover {
   }
 
   /* /// Landing /// */
+  .intro-container {
+    flex-direction: column;
+  }
+
   .personal-description {
     font-size: 15px;
     width: 375px;

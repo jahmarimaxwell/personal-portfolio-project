@@ -56,11 +56,14 @@ export default function LandingPage() {
 
     return (
         <> 
+        <div className="intro-words-container">
+            <h4 className="intro-words"> 
+                <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
+            </h4>
+            <h3 className="intro-words">Carousel Coming Soon!</h3>
+        </div>
+        {/* <div className="intro-container-holder"> */}
             <div className="intro-container">
-                <h4 className="intro-words"> 
-                    <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
-                </h4>
-                <h3 className="intro-words">Carousel Coming Soon!</h3>
                 {/* <div className="slider-container">
                     <Slider className="slider" {...settings}>
                         <div className="slider-item1"> */}
@@ -87,15 +90,18 @@ export default function LandingPage() {
                     as I work toward becoming a confident and creative full-stack developer.
                     </h4>
                 </div>
-                <div className="project-heading">
-                    <h1 className="projects">Projects</h1>
-                </div>
-                <div className="project-button-container">
-                    <button className="project-button" onClick={scrollToProjects}>
-                           Tap to View Projects
-                    </button>
+                <div className="project-section-container">
+                    <div className="project-heading">
+                        <h1 className="projects">Projects</h1>
+                    </div>
+                    <div className="project-button-container">
+                        <button className="project-button" onClick={scrollToProjects}>
+                            Tap to View Projects
+                        </button>
+                    </div>
                 </div>
             </div>
+        {/* </div> */}
 
 
         <div className="section-scroll" ref={sectionScrollRef}>
