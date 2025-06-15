@@ -423,7 +423,7 @@ color: white;
 }
 
 .display-container:hover {
-  box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+  /* box-shadow: 0px 0px 30px rgba(0,0,0, 0.6); */
   /* White Shadow on Hover */
   /* box-shadow: 0px 0px 30px rgba(244, 242, 242, 0.6); */
   cursor: pointer;
