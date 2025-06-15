@@ -91,11 +91,9 @@ export default function LandingPage() {
                     <h1 className="projects">Projects</h1>
                 </div>
                 <div className="project-button-container">
-                <strong className="arrow">↓</strong>   
                     <button className="project-button" onClick={scrollToProjects}>
                             View Projects
                     </button>
-                <strong className="arrow">↓</strong>
                 </div>
             </div>
 
