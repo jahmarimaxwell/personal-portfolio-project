@@ -92,7 +92,7 @@ export default function LandingPage() {
                 </div>
                 <div className="project-button-container">
                     <button className="project-button" onClick={scrollToProjects}>
-                            View Projects
+                           Tap to View Projects
                     </button>
                 </div>
             </div>

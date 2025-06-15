@@ -194,8 +194,8 @@ initial-value: #000;
     calc(-2.1*var(--s)) calc(1.9*var(--s)),
     calc(2.7*var(--s)) calc(-1.3*var(--s)),
     calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
-  } */
-/* } */
+  } 
+} */
 
   /* /// CIRCLE CHANGING BACKGROUND /// */
   /* --s: 80px;
@@ -402,8 +402,8 @@ a:hover {
   width: 800px;
   margin: 50px;
   padding: 30px;
-  border: 5px white solid;
-  border-radius: 20px;
+  /* border: 5px white solid; */
+  /* border-radius: 20px; */
 }
 
 .stopper {
@@ -430,9 +430,24 @@ a:hover {
   margin-bottom: 80px;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .project-button {
-font-size: 40px;
-color: white;
+  width: 500px;
+  font-size: 35px;
+  background-color: white;
+  color: black;
+  animation: pulse 2.5s ease-in-out infinite;
 }
 
 /* Scroll Container */
@@ -468,7 +483,7 @@ color: white;
   overflow: hidden;
   overflow-y: auto; /* if your content may exceed screen height */
   /* position: sticky; */
-  flex-direction: column; /* changes direction */
+  flex-direction: row; /* changes direction */
   /* background-color: #4B4A4A; */
   justify-content: space-around;
   align-items: center;
@@ -516,7 +531,7 @@ color: white;
 }
 
 .project-title {
-  background-color: black;
+  font-size: 60px;
   color: white;
   margin: 10px;
   padding: 5px;
@@ -779,10 +794,17 @@ color: white;
   .project-button {
     font-size: 20px;
     height: 50px;
+    width: 250px;
   }
 
   .display-container {  
+    flex-direction: column;
     justify-content: center;
+  }
+
+  .project-title {
+    font-size: 35px;
+    background-color: black;
   }
 
   .content {
