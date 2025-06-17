@@ -807,11 +807,15 @@ a:hover {
     flex-direction: column;
   }
 
+  .intro-words {
+    display: none;
+  }
+
   .personal-description {
     font-size: 15px;
     width: 375px;
     margin: 0px;
-    padding: 10px;
+    padding: 0px 10px;
   }
 
   .project-section-container {
@@ -819,7 +823,11 @@ a:hover {
   }
 
   .project-heading {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .projects {
+    font-size: 40px;
   }
 
   .project-button-container {
@@ -837,8 +845,8 @@ a:hover {
     justify-content: center;
   }
 
-  .projects {
-    font-size: 40px;
+  .info-text.visible {
+    font-size: 13px;
   }
 
   .project-title {
