@@ -41,6 +41,8 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  /* Locks the screen on intro */
+  overflow: hidden;
 }
 
 h1 {
@@ -701,8 +703,11 @@ a:hover {
   display: flex;
   align-items: center;
   /* margin: 30px; */
-  padding: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
   flex-direction: row;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 /* Portrait Styling */
@@ -805,6 +810,8 @@ a:hover {
   .personal-description {
     font-size: 15px;
     width: 375px;
+    margin: 0px;
+    padding: 10px;
   }
 
   .project-button {
@@ -816,6 +823,10 @@ a:hover {
   .display-container {  
     flex-direction: column;
     justify-content: center;
+  }
+
+  .projects {
+    font-size: 40px;
   }
 
   .project-title {
