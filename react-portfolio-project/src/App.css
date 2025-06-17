@@ -554,7 +554,7 @@ a:hover {
 
 .info-text {
   display: none;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -812,6 +812,18 @@ a:hover {
     width: 375px;
     margin: 0px;
     padding: 10px;
+  }
+
+  .project-section-container {
+    padding: 20px;
+  }
+
+  .project-heading {
+    padding-bottom: 20px;
+  }
+
+  .project-button-container {
+    margin: 20px;
   }
 
   .project-button {
