@@ -148,8 +148,8 @@ export default function LandingPage() {
                     <div className="information">
                         <strong><h2 className="project-title">Marvel World</h2></strong>
                         <p className={`info-text ${showInfo.marvelWorld ? "visible" : "hidden"}`}>
-                            This App demonstrates the use of <strong>React </strong>
-                            and the <strong>Marvel API</strong>.
+                            This App demonstrates the use of React 
+                            and the Marvel API.
                             It allows you to search for any Marvel
                             character and display their image,
                             as well as their description. It also allows you
