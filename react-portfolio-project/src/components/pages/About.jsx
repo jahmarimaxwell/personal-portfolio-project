@@ -3,6 +3,7 @@ import cssLogo from '../../assets/svg/css.svg'
 import javascriptLogo from '../../assets/svg/javascript.svg'
 import viteLogo from '../../assets/svg/vite.svg'
 import reactLogo from '../../assets/svg/react.svg'
+import pythonLogo from '../../assets/svg/python.svg'
 import React, { useState, useEffect } from "react";
 import TiltContainer from "../stylish/TiltContainer.jsx";
 
@@ -43,7 +44,7 @@ export default function About() {
                         <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
                 
                         <div className="tech-stack">
-                            <p><strong>Proficient in</strong></p>
+                            <p className="proficiency"><strong>Proficient in</strong></p>
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
                                         <img src={htmlLogo} className="logo" alt="HTML logo"/>
                                     </a>
@@ -58,7 +59,10 @@ export default function About() {
                                     </a>
                                     <a href="https://react.dev" target="_blank">
                                     <img src= {reactLogo} className="logo spin" alt="React logo"/>
-                                    </a>                         
+                                    </a>  
+                                    <a href="https://www.python.org/" target="_blank">
+                                    <img src={pythonLogo} className="logo" alt="Python logo"/>
+                                    </a>                       
                         </div>
                 </div>
             </div>

@@ -793,10 +793,6 @@ a:hover {
 /* ////// Mobile properties ////// */
 
 @media (max-width: 480px) { 
-  .body {
-    overflow: none;
-  }
-
   /* /// Nav-Bar /// */
   .nav-bar-container {
     position: static;
@@ -861,6 +857,10 @@ a:hover {
     padding: 5px;
   }
 
+  .info-text.hidden {
+    display: none;
+  }
+
   .info-text.visible {
     font-size: 13px;
   }
@@ -918,18 +918,38 @@ a:hover {
   }
 
   .portrait-holder {
-   border-radius: 50px;
-   width: 100%;
+    border-radius: 50px;
+    width: 100%;
   }
 
   .portrait {
     width: 100%;
-    height: 375px;
+    height: 325px;
     border-radius: 10px;
   }
 
+  .email {
+    display: none;
+  }
+
+  .description {
+    background-color: inherit;
+  }
+
   .tech-stack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0px;
+  }
+
+  .proficiency {
+    display: none;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
   }
 
   .github-link {
