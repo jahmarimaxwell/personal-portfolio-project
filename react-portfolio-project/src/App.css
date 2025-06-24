@@ -683,8 +683,8 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
   flex-direction: row;
-  min-height: 100vh;
-  overflow-y: auto;
+  /* min-height: 100vh;
+  overflow-y: auto; */
 }
 
 /* Portrait Styling */
@@ -715,8 +715,8 @@ a:hover {
 /* Portrait */
 .portrait {
   margin: 30px;
-  width: 680px;
-  height: 700px;
+  width: 615px;
+  height: 600px;
   border-radius: 10px;
 }
 
