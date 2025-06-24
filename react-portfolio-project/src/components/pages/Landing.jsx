@@ -110,7 +110,7 @@ export default function LandingPage() {
                 <TiltContainer>
                 <a href="https://mls-dreammakers.github.io/random-users-app/">      
                     <div className="picture-div"> 
-                        <img className="picture" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
+                        <img className="picture" tabindex="0" src="/personal-portfolio-project/gifs/Random-User-Generator-App.gif" alt="Random User Generator App"/>
                     </div>
                 </a>
                 </TiltContainer>
@@ -139,7 +139,7 @@ export default function LandingPage() {
                 <TiltContainer>
                 <a href="https://react-api-project.github.io/marvel-comic-react-project/">
                     <div className="picture-div">
-                        <img className="picture" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
+                        <img className="picture" tabindex="0" src="/personal-portfolio-project/gifs/Marvel-React-API.gif" alt="Marvel React API"/>
                     </div>
                 </a>
                 </TiltContainer>
@@ -168,7 +168,7 @@ export default function LandingPage() {
                 <TiltContainer>
                 <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
                     <div className="picture-div">
-                        <img className="picture" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
+                        <img className="picture" tabindex="0" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
                     </div>
                 </a>
                 </TiltContainer>
@@ -195,7 +195,7 @@ export default function LandingPage() {
                 <TiltContainer>
                 <a href="https://jahmarimaxwell.github.io/palette-picker/">
                     <div className="picture-div"> 
-                        <img className="picture" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
+                        <img className="picture" tabindex="0" src="/personal-portfolio-project/pictures/Palette-picker.png" alt="Palette Picker"/>
                     </div>
                 </a>
                 </TiltContainer>

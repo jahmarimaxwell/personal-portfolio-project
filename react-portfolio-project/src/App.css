@@ -91,30 +91,6 @@ button:focus-visible {
 
 /* /////////// Main Website Styling ///////////*/
 
-/* ///// Cool Background //// */
-
-
-@property --a {
-syntax: '<angle>';
-inherits: true;
-initial-value: 0deg;
-}
-@property --p {
-syntax: '<percentage>';
-inherits: true;
-initial-value: 0%;
-}
-@property --c1 {
-syntax: '<color>';
-inherits: true;
-initial-value: #000;
-}
-@property --c2 {
-syntax: '<color>';
-inherits: true;
-initial-value: #000;
-}
-
 #root {
   display: flex;
   /* flex-direction: column; */
@@ -131,7 +107,7 @@ initial-value: #000;
   align-content: center;
   flex-wrap: wrap;
   
-/* //// 3D SQUARES //// */
+/* ///// 3D SQUARES/CUBES ///// */
   --s: 182px; 
   --c1: #1d1d1d;
   --c2: #4e4f51;
@@ -144,6 +120,7 @@ initial-value: #000;
 
   background-size: var(--s) calc(var(--s)*tan(30deg));
   }
+
  /* //// SQUARE CHANGING BACKGROUND /// */
   /* --s: 100px;
   --c1: gray;
@@ -284,7 +261,7 @@ initial-value: #000;
 
 /* ///////// Content Website Styling ////////// */
 
-/* NavBar Styling */
+/* //// NavBar Styling //// */
 .nav-bar-container {
   /* background-color: white; */
   /* Centers NavBar */
@@ -887,6 +864,7 @@ a:hover {
   }
 
   .picture {
+    transition: transform 0.3s ease-in-out;
     border: black solid 3px;
     padding: 0px;
     width: 375px;
@@ -895,7 +873,8 @@ a:hover {
     border-radius: 10px;
   } 
   
-  .picture:hover {
+  .picture:focus {
+    transform: scale(1.1);
     /* transform: scale(2);
     height: 300px; */
   }
