@@ -91,6 +91,14 @@ button:focus-visible {
 
 /* /////////// Main Website Styling ///////////*/
 
+/* Makes Background always fill page */
+html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 #root {
   display: flex;
   /* flex-direction: column; */
@@ -231,6 +239,10 @@ button:focus-visible {
   will-change: filter;
   transition: filter 300ms;
 }
+.logo {
+  width: 100px;
+  height: 100px;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -349,6 +361,12 @@ a:hover {
   display: flex;
   justify-content: center;
   width: 1200px;
+}
+
+/* /// Slider /// */
+.slider-container {
+  padding: 30px;
+  width: 100%;
 }
 
 .slider {
@@ -640,12 +658,20 @@ a:hover {
   touch-action: manipulation; /* Optimized for touchscreens */
 }
 
+.scroll-to-top {
+    height: 50px;
+    width: 5px;
+    font-size: 32px;
+    bottom: 15px; /* Slightly lower for easy reach */
+    right: 15px;
+}
+
 /* Increase Clickable Area */
 .scroll-to-top::before {
   content: "";
   position: absolute;
   width: 90px;   /* Enlarged active area */
-  height: 90px;
+  height: 10px;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -680,18 +706,18 @@ a:hover {
   display: flex;
   align-items: center;
   /* margin: 30px; */
-  padding-left: 10px;
-  padding-right: 10px;
-  flex-direction: row;
+  padding: 10px;
+  flex-direction: column;
   /* min-height: 100vh;
   overflow-y: auto; */
 }
-
+ 
 /* Portrait Styling */
 .portrait-holder {
   display: flex;
   justify-content: center;
   width: 100%;
+  border-radius: 50px;
   /* Creates Striped Lines */
   /* background-size: 30px 30px;
   transition: opacity 0.3s ease;
@@ -715,9 +741,11 @@ a:hover {
 /* Portrait */
 .portrait {
   margin: 30px;
-  width: 615px;
-  height: 600px;
+  width: 100%;
+  height: 200px;
   border-radius: 10px;
+  padding: 35px;
+  border: 5px white solid;
 }
 
 .information {
@@ -726,7 +754,7 @@ a:hover {
 
 /* Description Styling */
 .description {
-  background-color: white;
+  background-color: inherit;
   border-radius: 60px;
   margin: 10px;
   display: flex;
@@ -737,6 +765,7 @@ a:hover {
 }
 
 .email {
+  display: none;
   color: black;
   margin: 20px;
 }
@@ -748,14 +777,25 @@ a:hover {
   font-size: 20px;
 } */
 
+.proficiency {
+  display: none;
+}
+
 .github-link {
-  width: 400px;
+  width: 285px;
   margin: 20px;
 }
 
 .tech-stack {
   margin: 20px;
   width: 100%;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
 }
 
 /* @media (max-width: 768px) {
@@ -878,72 +918,12 @@ a:hover {
     /* transform: scale(2);
     height: 300px; */
   }
-  
-  /* /// Slider /// */
-  .slider-container {
-    padding: 30px;
-    width: 100%;
-  }
 
-  /* /// Section Scroll /// */
-  .section-scroll {
-    width: 100%;
+  @media (hover: hover) {
+    .picture:focus {
+    transform: scale(1.1);
+    /* transform: scale(2);
+    height: 300px; */
   }
-
-  /* /// About /// */
-  .about-content {
-    padding: 10px;
-    flex-direction: column;
+    }
   }
-
-  .portrait-holder {
-    border-radius: 50px;
-    width: 100%;
-  }
-
-  .portrait {
-    width: 100%;
-    height: 325px;
-    border-radius: 10px;
-  }
-
-  .email {
-    display: none;
-  }
-
-  .description {
-    background-color: inherit;
-  }
-
-  .tech-stack {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0px;
-  }
-
-  .proficiency {
-    display: none;
-  }
-
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .github-link {
-    width: 285px;
-  }
-
-  .scroll-to-top {
-    height: 50px;
-    width: 5px;
-    font-size: 32px;
-    bottom: 15px; /* Slightly lower for easy reach */
-    right: 15px;
-  }
-
-  .scroll-to-top::before {
-    height: 10px;
-  }
-}
