@@ -801,6 +801,18 @@ a:hover {
 
 /* ////// Mobile properties ////// */
 
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px); /* Moves the div 100px up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 480px) { 
   /* /// Nav-Bar /// */
   .nav-bar-container {
@@ -858,6 +870,7 @@ a:hover {
     width: 325px;
     font-size: 30px;
     background-color: black;
+    animation: moveUpDown 3s ease-in-out infinite; /* 2s duration, infinite loop */
   }
 
   .info-text {
