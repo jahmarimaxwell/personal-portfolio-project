@@ -32,6 +32,7 @@ export default function About() {
     return (
     <>
             <div className="about-content">
+                <div className="info-container">
                     <div className="portrait-holder">
                         <a href="https://github.com/jahmarimaxwell">
                             <TiltContainer> 
@@ -39,12 +40,23 @@ export default function About() {
                             </TiltContainer> 
                         </a>
                     </div>
+                        <div className="personal-description">
+                            <h4>I'm a passionate website developer in the making, 
+                            constantly striving to grow my skills and create meaningful 
+                            digital experiences. With a strong foundation in HTML, CSS, and JavaScript, 
+                            I'm driven by curiosity and a desire to build clean, responsive, 
+                            and user-friendly websites. Whether it's designing a sleek portfolio or solving bugs in complex layouts, 
+                            I approach each challenge as a chance to learn and improve. 
+                            I believe in the power of collaboration, perseverance, and continuous learning 
+                            as I work toward becoming a confident and creative full-stack developer.
+                            </h4>
+                        </div>
+                </div>
           
                 <div className="description">
                         <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
-                
+                        <p className="proficiency"><strong>Technologies</strong></p>
                         <div className="tech-stack">
-                            <p className="proficiency"><strong>Proficient in</strong></p>
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
                                         <img src={htmlLogo} className="logo" alt="HTML logo"/>
                                     </a>

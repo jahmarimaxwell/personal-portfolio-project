@@ -42,7 +42,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   /* Locks the screen on intro */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -333,6 +333,10 @@ a:hover {
   margin: 15px;
 }
 
+.intro-words-container {
+ visibility: hidden;
+}
+
 .intro-words {
   margin: 15px;
 }
@@ -346,6 +350,10 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  overscroll-behavior: contain;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* /// Carousel /// */
@@ -391,7 +399,7 @@ a:hover {
 
 .personal-description {
   display: flex;
-  font-size: 25px;
+  font-size: 23px;
   width: 800px;
   margin: 30px;
   padding: 30px;
@@ -703,6 +711,12 @@ a:hover {
   /* min-height: 100vh;
   overflow-y: auto; */
 }
+
+/* Info Container Styling */
+.info-container {
+ display: flex;
+ align-items: center;
+}
  
 /* Portrait Styling */
 .portrait-holder {
@@ -734,10 +748,8 @@ a:hover {
 .portrait {
   margin: 30px;
   width: 100%;
-  height: 400px;
+  height: 550px;
   border-radius: 10px;
-  padding: 35px;
-  border: 5px white solid;
 }
 
 .information {
@@ -770,7 +782,7 @@ a:hover {
 } */
 
 .proficiency {
-  display: none;
+  font-size: 50px;
 }
 
 .github-link {
@@ -825,6 +837,7 @@ a:hover {
 
   /* /// Landing /// */
   .intro-container {
+    margin-top: 20px;
     flex-direction: column;
   }
 
