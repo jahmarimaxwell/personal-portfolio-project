@@ -853,6 +853,7 @@ a:hover {
   }
 
   .project-section-container {
+    height: 500px;
     padding: 20px;
   }
 
@@ -944,4 +945,16 @@ a:hover {
     height: 300px; */
   }
     }
+
+  /* //// About //// */
+
+  .portrait {
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
   }
+
+  .info-container {
+    flex-direction: column;
+  }
+}
