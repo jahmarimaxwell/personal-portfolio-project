@@ -34,11 +34,11 @@ export default function About() {
             <div className="about-content">
                 <div className="info-container">
                     <div className="portrait-holder">
+                        <TiltContainer> 
                         <a href="https://github.com/jahmarimaxwell">
-                            <TiltContainer> 
-                            <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>
-                            </TiltContainer> 
+                            <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>                        
                         </a>
+                        </TiltContainer> 
                     </div>
                         <div className="personal-description">
                             <h4>I'm a passionate website developer in the making, 

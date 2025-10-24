@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function LandingPage() {
     const [showScroll, setShowScroll] = useState(false);
+    const [scrollLocked, setScrollLocked] = useState(true);
     const [showInfo, setShowInfo] = useState({
         randomUser: false,
         marvelWorld: false,
@@ -16,24 +17,58 @@ export default function LandingPage() {
     
     const sectionScrollRef = useRef(null);
 
-    // Scroll-to-top detection
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowScroll(window.scrollY > 300);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    // Button scroll to projects
-    const scrollToProjects = () => {
-        sectionScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+   // Lock/unlock scroll when state changes
+  useEffect(() => {
+    document.body.style.overflow = scrollLocked ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
     };
+  }, [scrollLocked]);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+  // Scroll to projects and unlock scroll
+  const scrollToProjects = () => {
+    setScrollLocked(false);
+    sectionScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Prevent scrolling back above project section
+  useEffect(() => {
+    if (!scrollLocked) {
+      const handleScrollLock = () => {
+        const projectsTop = sectionScrollRef.current?.offsetTop || 0;
+        if (window.scrollY < projectsTop - 50) {
+          window.scrollTo({ top: projectsTop, behavior: "smooth" });
+        }
+      };
+      window.addEventListener("scroll", handleScrollLock);
+      return () => window.removeEventListener("scroll", handleScrollLock);
+    }
+  }, [scrollLocked]);
+
+  // Show scroll-to-top button after scrolling down a bit
+  useEffect(() => {
+    const handleScrollButton = () => {
+      setShowScroll(window.scrollY > 300);
     };
+    window.addEventListener("scroll", handleScrollButton);
+    return () => window.removeEventListener("scroll", handleScrollButton);
+  }, []);
 
+  // Re-lock scroll automatically once the user scrolls to the very top
+  useEffect(() => {
+    const handleScrollRelock = () => {
+      if (window.scrollY <= 5) {
+        setScrollLocked(true);
+      }
+    };
+    window.addEventListener("scroll", handleScrollRelock);
+    return () => window.removeEventListener("scroll", handleScrollRelock);
+  }, []);
 
     // Toggle visibility for each info section independently
     const toggleInfo = (section) => {
