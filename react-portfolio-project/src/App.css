@@ -472,7 +472,7 @@ a:hover {
 /* Container for tilt effect */
 .tilt-container {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   justify-content: center;
   transition: transform 0.2s ease;
   transform-style: preserve-3d;
@@ -747,7 +747,7 @@ a:hover {
 /* Portrait */
 .portrait {
   margin: 30px;
-  width: 100%;
+  /* width: 100%; */
   height: 550px;
   border-radius: 10px;
   box-shadow: 
