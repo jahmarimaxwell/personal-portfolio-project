@@ -93,9 +93,9 @@ export default function LandingPage() {
         <> 
         <div className="intro-words-container">
             <h4 className="intro-words"> 
-                <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong> 
+                {/* <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong>  */}
             </h4>
-            <h3 className="intro-words">Carousel Coming Soon!</h3>
+            {/* <h3 className="intro-words">Carousel Coming Soon!</h3> */}
         </div>
         {/* <div className="intro-container-holder"> */}
             <div className="intro-container">
