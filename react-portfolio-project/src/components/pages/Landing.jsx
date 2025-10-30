@@ -33,8 +33,11 @@ export default function LandingPage() {
 
   // Scroll to top
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // Temporarily disable scroll lock while scrolling up
+  setScrollLocked(true);
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
   // Prevent scrolling back above project section
   useEffect(() => {
