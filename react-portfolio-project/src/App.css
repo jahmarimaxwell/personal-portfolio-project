@@ -967,6 +967,11 @@ a:hover {
     height: 350px;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: none;
+  }
+
+  .personal-description {
+    padding: 20px;
   }
 
   .info-container {
