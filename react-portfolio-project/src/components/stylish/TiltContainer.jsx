@@ -3,29 +3,27 @@ import React, { useEffect, useRef, useState } from "react";
 export default function TiltContainer({ children }) {
     const containerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        // Check screen size on load
         const checkMobile = () => {
             setIsMobile(window.matchMedia("(max-width: 480px)").matches);
         };
 
-        checkMobile(); // Initial check
+        checkMobile();
         window.addEventListener("resize", checkMobile);
 
-        return () => {
-            window.removeEventListener("resize", checkMobile);
-        };
+        return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
     useEffect(() => {
-        if (isMobile) return; // Skip tilt behavior on mobile
+        if (isMobile || !ready) return;
 
         const el = containerRef.current;
         if (!el) return;
 
-        const height = el.clientHeight;
-        const width = el.clientWidth;
+        const height = el.clientHeight || el.offsetHeight;
+        const width = el.clientWidth || el.offsetWidth;
 
         const handleMove = (e) => {
             const xVal = e.layerX;
@@ -57,8 +55,34 @@ export default function TiltContainer({ children }) {
             el.removeEventListener("mouseout", resetTransform);
             el.removeEventListener("mousedown", clickTransform);
             el.removeEventListener("mouseup", releaseTransform);
+            el.style.transform = "none"; // ensure reset on unmount
         };
-    }, [isMobile]);
+    }, [isMobile, ready]);
+
+    // Wait until image(s) inside are loaded before enabling tilt
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const imgs = el.querySelectorAll("img");
+
+        if (imgs.length === 0) {
+            setReady(true);
+            return;
+        }
+
+        let loaded = 0;
+        imgs.forEach((img) => {
+            if (img.complete) {
+                loaded++;
+                if (loaded === imgs.length) setReady(true);
+            } else {
+                img.onload = () => {
+                    loaded++;
+                    if (loaded === imgs.length) setReady(true);
+                };
+            }
+        });
+    }, []);
 
     return (
         <div
