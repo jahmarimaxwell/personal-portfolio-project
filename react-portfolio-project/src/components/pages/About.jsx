@@ -39,6 +39,7 @@ export default function About() {
                             <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>                        
                         </a>
                         </TiltContainer> 
+                        <h2> Click to view github </h2>
                     </div>
                         <div className="personal-description">
                             <h4>I'm a passionate website developer in the making, 
