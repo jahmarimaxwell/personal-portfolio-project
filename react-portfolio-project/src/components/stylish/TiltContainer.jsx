@@ -2,67 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function TiltContainer({ children }) {
     const containerRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
     const [ready, setReady] = useState(false);
 
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.matchMedia("(max-width: 480px)").matches);
-        };
-
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-
-        return () => window.removeEventListener("resize", checkMobile);
-    }, []);
-
-    useEffect(() => {
-        if (isMobile || !ready) return;
-
-        const el = containerRef.current;
-        if (!el) return;
-
-        const height = el.clientHeight || el.offsetHeight;
-        const width = el.clientWidth || el.offsetWidth;
-
-        const handleMove = (e) => {
-            const xVal = e.layerX;
-            const yVal = e.layerY;
-            const yRotation = 20 * ((xVal - width / 2) / width);
-            const xRotation = -20 * ((yVal - height / 2) / height);
-            el.style.transform = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-        };
-
-        const resetTransform = () => {
-            el.style.transform = "perspective(500px) scale(1) rotateX(0) rotateY(0)";
-        };
-
-        const clickTransform = () => {
-            el.style.transform = "perspective(500px) scale(0.9) rotateX(0) rotateY(0)";
-        };
-
-        const releaseTransform = () => {
-            el.style.transform = "perspective(500px) scale(1.1) rotateX(0) rotateY(0)";
-        };
-
-        el.addEventListener("mousemove", handleMove);
-        el.addEventListener("mouseout", resetTransform);
-        el.addEventListener("mousedown", clickTransform);
-        el.addEventListener("mouseup", releaseTransform);
-
-        return () => {
-            el.removeEventListener("mousemove", handleMove);
-            el.removeEventListener("mouseout", resetTransform);
-            el.removeEventListener("mousedown", clickTransform);
-            el.removeEventListener("mouseup", releaseTransform);
-            el.style.transform = "none"; // ensure reset on unmount
-        };
-    }, [isMobile, ready]);
-
-    // Wait until image(s) inside are loaded before enabling tilt
+    // Wait for images to load before enabling tilt
     useEffect(() => {
         const el = containerRef.current;
         if (!el) return;
+
         const imgs = el.querySelectorAll("img");
 
         if (imgs.length === 0) {
@@ -71,6 +17,7 @@ export default function TiltContainer({ children }) {
         }
 
         let loaded = 0;
+
         imgs.forEach((img) => {
             if (img.complete) {
                 loaded++;
@@ -84,12 +31,91 @@ export default function TiltContainer({ children }) {
         });
     }, []);
 
+    useEffect(() => {
+        if (!ready) return;
+
+        const el = containerRef.current;
+        if (!el) return;
+
+        let animationFrame = null;
+
+        const calculateTilt = (clientX, clientY, sensitivity) => {
+            const rect = el.getBoundingClientRect();
+            const width = rect.width;
+            const height = rect.height;
+
+            const xVal = clientX - rect.left;
+            const yVal = clientY - rect.top;
+
+            const yRotation = sensitivity * ((xVal - width / 2) / width);
+            const xRotation = -sensitivity * ((yVal - height / 2) / height);
+
+            cancelAnimationFrame(animationFrame);
+
+            animationFrame = requestAnimationFrame(() => {
+                el.style.transform = `
+                    perspective(600px)
+                    scale(1.05)
+                    rotateX(${xRotation}deg)
+                    rotateY(${yRotation}deg)
+                `;
+            });
+        };
+
+        const startInteraction = () => {
+            el.style.transition = "none";
+            el.style.transform =
+                "perspective(600px) scale(0.95) rotateX(0deg) rotateY(0deg)";
+        };
+
+        const resetTransform = () => {
+            el.style.transition = "transform 0.3s ease";
+            el.style.transform =
+                "perspective(600px) scale(1) rotateX(0deg) rotateY(0deg)";
+        };
+
+        // 🖱 Desktop
+        const handleMouseMove = (e) => {
+            calculateTilt(e.clientX, e.clientY, 20);
+        };
+
+        const handleMouseLeave = () => {
+            resetTransform();
+        };
+
+        // 📱 Mobile (more sensitive)
+        const handleTouchMove = (e) => {
+            const touch = e.touches[0];
+            calculateTilt(touch.clientX, touch.clientY, 40);
+        };
+
+        el.addEventListener("mousemove", handleMouseMove);
+        el.addEventListener("mouseleave", handleMouseLeave);
+        el.addEventListener("mousedown", startInteraction);
+        el.addEventListener("mouseup", resetTransform);
+
+        el.addEventListener("touchstart", startInteraction, { passive: true });
+        el.addEventListener("touchmove", handleTouchMove, { passive: true });
+        el.addEventListener("touchend", resetTransform);
+
+        return () => {
+            cancelAnimationFrame(animationFrame);
+
+            el.removeEventListener("mousemove", handleMouseMove);
+            el.removeEventListener("mouseleave", handleMouseLeave);
+            el.removeEventListener("mousedown", startInteraction);
+            el.removeEventListener("mouseup", resetTransform);
+
+            el.removeEventListener("touchstart", startInteraction);
+            el.removeEventListener("touchmove", handleTouchMove);
+            el.removeEventListener("touchend", resetTransform);
+
+            el.style.transform = "none";
+        };
+    }, [ready]);
+
     return (
-        <div
-            ref={containerRef}
-            className="tilt-container"
-            style={{ transform: isMobile ? "none" : undefined }}
-        >
+        <div ref={containerRef} className="tilt-container">
             {children}
         </div>
     );

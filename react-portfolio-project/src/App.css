@@ -524,9 +524,10 @@ a:hover {
   display: flex;
   /* width: 100%; */
   justify-content: center;
-  transition: transform 0.2s ease;
+  /* transition: transform 0.15s ease; */
   transform-style: preserve-3d;
   will-change: transform;
+  touch-action: none;
  }
   
  .tilt-container * {
@@ -912,13 +913,6 @@ a:hover {
     display: none;
   }
 
-  .personal-description {
-    font-size: 15px;
-    width: 375px;
-    margin: 0px;
-    padding: 0px 10px;
-  }
-
   .project-section-container {
     height: 500px;
     padding: 20px;
@@ -1022,10 +1016,19 @@ a:hover {
   }
 
   .personal-description {
+    font-size: 15px;
+    width: 325px;
+    margin: 0px;
     padding: 20px;
   }
 
   .info-container {
     flex-direction: column;
+    padding: 10px;
   }
+
+  .description {
+      margin: 0px;
+  }
+
 }
