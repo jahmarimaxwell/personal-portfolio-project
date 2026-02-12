@@ -849,24 +849,24 @@ a:hover {
 } */
 
 .proficiency {
+  margin-bottom: 15px;
   font-size: 50px;
 }
 
-.github-link {
+/* .github-link {
   width: 285px;
   margin: 20px;
-}
-
-.tech-stack {
-  margin: 20px;
-  width: 100%;
-}
+} */
 
 .tech-stack {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0px;
+  /* margin: 20px; */
+  width: 100%;
+  background-color: gray;
+  border-radius: 50px;
 }
 
 /* @media (max-width: 768px) {
@@ -934,6 +934,10 @@ a:hover {
     font-size: 20px;
     height: 50px;
     width: 250px;
+  }
+  
+  .clickformore {
+  font-size: 25px;
   }
 
   .display-container {  
@@ -1008,6 +1012,11 @@ a:hover {
     }
 
   /* ////// About ////// */
+  .info-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .portrait {
     height: 350px;
     padding: 20px;
@@ -1018,17 +1027,18 @@ a:hover {
   .personal-description {
     font-size: 15px;
     width: 325px;
+    /* erases the margin on desktop */
     margin: 0px;
+    margin-top: 30px;
     padding: 20px;
   }
 
-  .info-container {
-    flex-direction: column;
-    padding: 10px;
+  .description {
+    margin: 0px;
   }
 
-  .description {
-      margin: 0px;
+  .tech-stack {
+    background-color: transparent;
   }
 
 }

@@ -126,6 +126,7 @@ export default function LandingPage() {
                             Tap to View Projects
                         </button>
                     </div>
+                    <h2 className="clickformore">Click the image of each project below to view them</h2>
                 </div>
             </div>
         {/* </div> */}

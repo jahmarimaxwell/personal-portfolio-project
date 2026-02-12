@@ -4,7 +4,7 @@ export default function TiltContainer({ children }) {
     const containerRef = useRef(null);
     const [ready, setReady] = useState(false);
 
-    // Wait for images to load before enabling tilt
+    // Wait until images inside are loaded
     useEffect(() => {
         const el = containerRef.current;
         if (!el) return;
@@ -38,6 +38,7 @@ export default function TiltContainer({ children }) {
         if (!el) return;
 
         let animationFrame = null;
+        let isTouching = false;
 
         const calculateTilt = (clientX, clientY, sensitivity) => {
             const rect = el.getBoundingClientRect();
@@ -63,12 +64,14 @@ export default function TiltContainer({ children }) {
         };
 
         const startInteraction = () => {
+            isTouching = true;
             el.style.transition = "none";
             el.style.transform =
                 "perspective(600px) scale(0.95) rotateX(0deg) rotateY(0deg)";
         };
 
         const resetTransform = () => {
+            isTouching = false;
             el.style.transition = "transform 0.3s ease";
             el.style.transform =
                 "perspective(600px) scale(1) rotateX(0deg) rotateY(0deg)";
@@ -83,20 +86,32 @@ export default function TiltContainer({ children }) {
             resetTransform();
         };
 
-        // 📱 Mobile (more sensitive)
+        // 📱 Mobile
         const handleTouchMove = (e) => {
+            if (!isTouching) return;
             const touch = e.touches[0];
             calculateTilt(touch.clientX, touch.clientY, 40);
         };
 
+        const handleTouchEndGlobal = () => {
+            if (isTouching) {
+                resetTransform();
+            }
+        };
+
+        // Desktop listeners
         el.addEventListener("mousemove", handleMouseMove);
         el.addEventListener("mouseleave", handleMouseLeave);
         el.addEventListener("mousedown", startInteraction);
         el.addEventListener("mouseup", resetTransform);
 
+        // Mobile listeners
         el.addEventListener("touchstart", startInteraction, { passive: true });
         el.addEventListener("touchmove", handleTouchMove, { passive: true });
-        el.addEventListener("touchend", resetTransform);
+
+        // Global touch end (prevents stuck state)
+        window.addEventListener("touchend", handleTouchEndGlobal);
+        window.addEventListener("touchcancel", handleTouchEndGlobal);
 
         return () => {
             cancelAnimationFrame(animationFrame);
@@ -108,7 +123,9 @@ export default function TiltContainer({ children }) {
 
             el.removeEventListener("touchstart", startInteraction);
             el.removeEventListener("touchmove", handleTouchMove);
-            el.removeEventListener("touchend", resetTransform);
+
+            window.removeEventListener("touchend", handleTouchEndGlobal);
+            window.removeEventListener("touchcancel", handleTouchEndGlobal);
 
             el.style.transform = "none";
         };
