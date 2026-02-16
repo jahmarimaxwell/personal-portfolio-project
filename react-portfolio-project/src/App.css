@@ -819,6 +819,10 @@ a:hover {
     0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+.viewgithub {
+  border-bottom: 5px solid #fff;
+}
+
 .information {
   margin: 10px;
 }
@@ -935,7 +939,7 @@ a:hover {
     height: 50px;
     width: 250px;
   }
-  
+
   .clickformore {
   font-size: 25px;
   }
