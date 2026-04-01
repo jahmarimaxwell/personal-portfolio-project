@@ -131,7 +131,8 @@ export default function LandingPage() {
             </div>
         {/* </div> */}
 
-
+        {/* Will change order to latest website */}
+        
         <div className="section-scroll" ref={sectionScrollRef}>
             {/* Random User Generator App */}
             <div className="display-container"> 
