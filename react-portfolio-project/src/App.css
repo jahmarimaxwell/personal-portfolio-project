@@ -1046,3 +1046,13 @@ a:hover {
   }
 
 }
+
+@media only screen and (min-device-width: 1180px) 
+and (max-device-height: 820px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: landscape) {
+    .display-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+}
