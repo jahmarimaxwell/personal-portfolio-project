@@ -130,10 +130,35 @@ export default function LandingPage() {
                 </div>
             </div>
         {/* </div> */}
-
-        {/* Will change order to latest website */}
         
         <div className="section-scroll" ref={sectionScrollRef}>
+            {/* Running Game */}
+            <div className="display-container">
+                <TiltContainer>
+                <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
+                    <div className="picture-div">
+                        <img className="picture" tabindex="0" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
+                    </div>
+                </a>
+                </TiltContainer>
+
+                <div className="content">
+                    <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p> 
+                    <div className="information">
+                        <strong><h2 className="project-title">The Running Game</h2></strong>
+                        <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
+                            A 2D Platformer aimed to replicate  
+                            old Flash Player games. This was my 
+                            first attempt at building a game.
+                        </p>
+                    </div>
+
+                    <button className="toggle-button" onClick={() => toggleInfo("runningGame")}>
+                        {showInfo.runningGame ? "Hide Info" : "Show Info"}
+                    </button>
+                </div>
+            </div>
+
             {/* Random User Generator App */}
             <div className="display-container"> 
                 <TiltContainer>
@@ -188,33 +213,6 @@ export default function LandingPage() {
 
                     <button className="toggle-button" onClick={() => toggleInfo("marvelWorld")}>
                         {showInfo.marvelWorld ? "Hide Info" : "Show Info"}
-                    </button>
-                </div>
-            </div>
-
-            {/* Running Game */}
-            <div className="display-container">
-                <TiltContainer>
-                <a href="https://drive.google.com/file/d/1Qzym1NTBll5FZClSGWCehICZ-Urb71Ah/view?usp=drive_link">
-                    <div className="picture-div">
-                        <img className="picture" tabindex="0" src="/personal-portfolio-project/gifs/The-Running-Game.gif" alt="The Running Game"/>
-                    </div>
-                </a>
-                </TiltContainer>
-
-                <div className="content">
-                    <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p> 
-                    <div className="information">
-                        <strong><h2 className="project-title">The Running Game</h2></strong>
-                        <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
-                            A 2D Platformer aimed to replicate  
-                            old Flash Player games. This was my 
-                            first attempt at building a game.
-                        </p>
-                    </div>
-
-                    <button className="toggle-button" onClick={() => toggleInfo("runningGame")}>
-                        {showInfo.runningGame ? "Hide Info" : "Show Info"}
                     </button>
                 </div>
             </div>
