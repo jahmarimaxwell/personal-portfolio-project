@@ -1046,3 +1046,14 @@ a:hover {
   }
 
 }
+
+@media only screen 
+  and (min-width: 1180px)
+  and (max-width: 1180px)
+  and (orientation: landscape) {
+
+   .intro-container {
+    margin: 10px;
+   }
+   
+  }
