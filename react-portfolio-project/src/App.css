@@ -1057,8 +1057,9 @@ a:hover {
     align-items: center;
   }
 
+  /* Changes pictures on Landing for iPad */
   .picture {
-    width: 30px;
+    width: 500px;
   } 
    
   }
