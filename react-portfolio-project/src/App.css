@@ -1043,13 +1043,15 @@ a:hover {
 
 }
 
+/* //// iPad A16 Screen //// */
+
 @media only screen 
   and (min-width: 1180px)
   and (max-width: 1180px)
   and (orientation: landscape) {
 
    .intro-container {
-    margin: 10px;
+    margin-bottom: 40px;
    }
 
    .display-container {  
