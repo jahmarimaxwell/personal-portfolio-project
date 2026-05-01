@@ -1055,5 +1055,10 @@ a:hover {
    .intro-container {
     margin: 10px;
    }
+
+   .display-container {  
+    display: flex;
+    align-items: center;
+  }
    
   }
