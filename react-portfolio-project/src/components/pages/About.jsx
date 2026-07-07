@@ -32,6 +32,12 @@ export default function About() {
     return (
     <>
             <div className="about-content">
+                <div className="resume-button-container">
+                 <a href="Jahmari's Resume.pdf">   
+                    <button className="resume-button"><strong>Resume</strong></button>
+                 </a>
+                </div>
+                <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
                 <div className="info-container">
                     <div className="portrait-holder">
                         <TiltContainer> 
@@ -55,7 +61,6 @@ export default function About() {
                 </div>
           
                 <div className="description">
-                        <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
                         <p className="proficiency"><strong>Technologies</strong></p>
                         <div className="tech-stack">
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">

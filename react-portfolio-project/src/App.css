@@ -763,11 +763,17 @@ a:hover {
   overflow-y: auto; */
 }
 
+.email {
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+
 /* Info Container Styling */
 .info-container {
  display: flex;
  align-items: center;
- padding: 50px;
+ padding: 30px;
  width: 100%;
 }
  
@@ -835,12 +841,6 @@ a:hover {
   padding: 20px;
 }
 
-.email {
-  display: none;
-  color: black;
-  margin: 20px;
-}
-
 /* .about-information {
   width: 100%;
   display: flex;
@@ -857,6 +857,14 @@ a:hover {
   width: 285px;
   margin: 20px;
 } */
+
+.resume-button {
+  background-color: white;
+  color: black;
+  padding: 20px 40px 20px 40px;
+  margin: 10px;
+  animation: pulse 2.5s ease-in-out infinite;
+}
 
 .tech-stack {
   display: flex;
