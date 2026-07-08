@@ -961,6 +961,10 @@ a:hover {
     justify-content: center;
   }
 
+  .running-game-lead {
+    margin: 5px;
+  }
+
   .project-title {
     width: 350px;
     font-size: 35px;
@@ -984,7 +988,7 @@ a:hover {
   }
 
   .toggle-button {
-    margin: 0px;
+    margin: 10px;
   }
 
   .content {
@@ -1065,6 +1069,7 @@ a:hover {
 
   .tech-stack {
     background-color: transparent;
+    justify-content: center;
   }
 
 }
