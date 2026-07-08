@@ -143,9 +143,9 @@ export default function LandingPage() {
                 </TiltContainer>
 
                 <div className="content">
-                    <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p> 
+                    <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p>
+                    <strong><h2 className="project-title">The Running Game</h2></strong> 
                     <div className="information">
-                        <strong><h2 className="project-title">The Running Game</h2></strong>
                         <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
                             A 2D Platformer aimed to replicate  
                             old Flash Player games. This was my 
@@ -170,8 +170,8 @@ export default function LandingPage() {
                 </TiltContainer>
 
                 <div className="content">
+                    <strong><h2 className="project-title">Random User Generator App</h2></strong>
                     <div className="information">
-                        <strong><h2 className="project-title">Random User Generator App</h2></strong>
                         <p className={`info-text ${showInfo.randomUser ? "visible" : "hidden"}`}>
                             This app demonstrates the use of an API.
                             Once refreshed, it grabs random information 
@@ -199,8 +199,8 @@ export default function LandingPage() {
                 </TiltContainer>
 
                 <div className="content">
+                    <strong><h2 className="project-title">Marvel World</h2></strong>
                     <div className="information">
-                        <strong><h2 className="project-title">Marvel World</h2></strong>
                         <p className={`info-text ${showInfo.marvelWorld ? "visible" : "hidden"}`}>
                             This App demonstrates the use of React 
                             and the Marvel API.

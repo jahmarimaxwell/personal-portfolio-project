@@ -33,8 +33,8 @@ export default function About() {
     <>
             <div className="about-content">
                 <div className="resume-button-container">
-                 <a href="Jahmari's Resume.pdf">   
-                    <button className="resume-button"><strong>Resume</strong></button>
+                 <a href="Jahmari's Resume.pdf">   {/* references my resume */} {/* It's in the public folder */}
+                    <button className="resume-button"><strong>Here's my resume</strong></button>
                  </a>
                 </div>
                 <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
@@ -48,7 +48,7 @@ export default function About() {
                         <h2 className="viewgithub"> Click to view github </h2>
                     </div>
                         <div className="personal-description">
-                            <h4>I'm a passionate website developer in the making, 
+                            <h4 className="description-words">I'm a passionate website developer in the making, 
                             constantly striving to grow my skills and create meaningful 
                             digital experiences. With a strong foundation in HTML, CSS, and JavaScript, 
                             I'm driven by curiosity and a desire to build clean, responsive, 

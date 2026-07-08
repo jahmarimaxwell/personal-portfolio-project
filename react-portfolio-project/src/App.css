@@ -419,6 +419,12 @@ a:hover {
   background-color: gray;
 }
 
+/*
+.description-words {
+  line-height: 2;
+}
+*/
+
 .stopper {
   background-color: black;
   height: 300px;
@@ -537,13 +543,13 @@ a:hover {
 /* ////// Displays pictures ////// */
 .display-container {
   display: flex;
+  flex-direction: column;
   position: relative;
   scroll-snap-align: start;
   min-height: 100vh;
   overflow: hidden;
   overflow-y: auto; /* if your content may exceed screen height */
-  /* position: sticky; */
-  flex-direction: row; /* changes direction */
+  /* flex-direction: row; */ /* changes direction */
   /* background-color: #4B4A4A; */
   justify-content: space-around;
   align-items: center;
@@ -554,7 +560,7 @@ a:hover {
   /* height: 900px; */
   /* border-bottom: solid #ccc 10px; */
   /* border-radius: 15px; */
-  /* Creates Striped Lines */
+  /* //// Creates Striped Lines //// */
   /* background-size: 30px 30px;
   transition: opacity 0.3s ease;
   background-image: linear-gradient(45deg, #ccc, 25%, transparent 25%, transparent 50%, #ccc, 50%, #ccc, 75%, transparent 75%, transparent); */
@@ -591,6 +597,7 @@ a:hover {
 }
 
 .project-title {
+   width: 100%;
   font-size: 60px;
   color: white;
   margin: 10px;
@@ -859,9 +866,10 @@ a:hover {
 } */
 
 .resume-button {
+  font-size: 25px;
   background-color: white;
   color: black;
-  padding: 20px 40px 20px 40px;
+  padding: 40px 60px 40px 60px;
   margin: 10px;
   animation: pulse 2.5s ease-in-out infinite;
 }
@@ -954,8 +962,9 @@ a:hover {
   }
 
   .project-title {
-    width: 325px;
-    font-size: 30px;
+    width: 350px;
+    font-size: 35px;
+    margin: 20px;
     background-color: black;
     animation: moveUpDown 3s ease-in-out infinite; /* 2s duration, infinite loop */
   }
