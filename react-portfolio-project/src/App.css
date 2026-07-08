@@ -1029,6 +1029,11 @@ a:hover {
     }
 
   /* ////// About ////// */
+  .email {
+    padding: 0px;
+    font-size: 25px;
+  }
+  
   .info-container {
     flex-direction: column;
     padding: 10px;
