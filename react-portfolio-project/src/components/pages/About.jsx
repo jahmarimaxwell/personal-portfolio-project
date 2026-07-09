@@ -33,7 +33,7 @@ export default function About() {
     <>
             <div className="about-content">
                 <div className="resume-button-container">
-                 <a href="Jahmari's Resume.pdf">   {/* references my resume */} {/* It's in the public folder */}
+                 <a href="Jahmari's Resume.pdf">   {/* references my resume */} {/* It's in the public folder*/}
                     <button className="resume-button"><strong>Here's my resume</strong></button>
                  </a>
                 </div>
@@ -41,9 +41,9 @@ export default function About() {
                 <div className="info-container">
                     <div className="portrait-holder">
                         <TiltContainer> 
-                        <a href="https://github.com/jahmarimaxwell">
+                        {/* <a href="https://github.com/jahmarimaxwell"> */}
                             <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>                        
-                        </a>
+                        {/* </a> */}
                         </TiltContainer> 
                         <h2 className="viewgithub"> Click to view github </h2>
                     </div>

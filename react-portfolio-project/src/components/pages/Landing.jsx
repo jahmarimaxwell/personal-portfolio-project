@@ -5,73 +5,98 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function LandingPage() {
-    const [showScroll, setShowScroll] = useState(false);
-    const [scrollLocked, setScrollLocked] = useState(true);
-    const [showInfo, setShowInfo] = useState({
-        randomUser: false,
-        marvelWorld: false,
-        runningGame: false,
-        palettePicker: false,
-    });
+const [showScroll, setShowScroll] = useState(false);
+const [scrollLocked, setScrollLocked] = useState(true);
+const [returningHome, setReturningHome] = useState(false);
 
-    
-    const sectionScrollRef = useRef(null);
+const [showInfo, setShowInfo] = useState({
+  randomUser: false,
+  marvelWorld: false,
+  runningGame: false,
+  palettePicker: false,
+});
 
-   // Lock/unlock scroll when state changes
-  useEffect(() => {
-    document.body.style.overflow = scrollLocked ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [scrollLocked]);
+const sectionScrollRef = useRef(null);
 
-  // Scroll to projects and unlock scroll
-  const scrollToProjects = () => {
-    setScrollLocked(false);
-    sectionScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+// Run once when the page loads
+useEffect(() => {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+
+  return () => {
+    window.history.scrollRestoration = "auto";
   };
+}, []);
 
-  // Scroll to top
-  const scrollToTop = () => {
-  // Temporarily disable scroll lock while scrolling up
-  setScrollLocked(true);
+// Lock/unlock scrolling
+useEffect(() => {
+  const overflow = scrollLocked ? "hidden" : "auto";
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  document.body.style.overflow = overflow;
+  document.documentElement.style.overflow = overflow;
+
+  return () => {
+    document.body.style.overflow = "auto";
+    document.documentElement.style.overflow = "auto";
+  };
+}, [scrollLocked]);
+
+// Scroll down to projects
+const scrollToProjects = () => {
+  setScrollLocked(false);
+
+  requestAnimationFrame(() => {
+    sectionScrollRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
 };
 
-  // Prevent scrolling back above project section
-  useEffect(() => {
-    if (!scrollLocked) {
-      const handleScrollLock = () => {
-        const projectsTop = sectionScrollRef.current?.offsetTop || 0;
-        if (window.scrollY < projectsTop - 50) {
-          window.scrollTo({ top: projectsTop, behavior: "smooth" });
-        }
-      };
-      window.addEventListener("scroll", handleScrollLock);
-      return () => window.removeEventListener("scroll", handleScrollLock);
+// Scroll back to the hero
+const scrollToTop = () => {
+  setReturningHome(true);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+// Handle scrolling behavior
+useEffect(() => {
+  const handleScroll = () => {
+    const projectsTop = sectionScrollRef.current?.offsetTop ?? 0;
+
+    // Show/hide scroll-to-top button
+    setShowScroll(window.scrollY > 300);
+
+    // Prevent manual scrolling above projects
+    if (
+      !scrollLocked &&
+      !returningHome &&
+      window.scrollY < projectsTop - 10
+    ) {
+      window.scrollTo({
+        top: projectsTop,
+        behavior: "auto",
+      });
+      return;
     }
-  }, [scrollLocked]);
 
-  // Show scroll-to-top button after scrolling down a bit
-  useEffect(() => {
-    const handleScrollButton = () => {
-      setShowScroll(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScrollButton);
-    return () => window.removeEventListener("scroll", handleScrollButton);
-  }, []);
+    // Finished returning home
+    if (returningHome && window.scrollY <= 5) {
+      setScrollLocked(true);
+      setReturningHome(false);
+    }
+  };
 
-  // Re-lock scroll automatically once the user scrolls to the very top
-  useEffect(() => {
-    const handleScrollRelock = () => {
-      if (window.scrollY <= 5) {
-        setScrollLocked(true);
-      }
-    };
-    window.addEventListener("scroll", handleScrollRelock);
-    return () => window.removeEventListener("scroll", handleScrollRelock);
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [scrollLocked, returningHome]);
 
     // Toggle visibility for each info section independently
     const toggleInfo = (section) => {
