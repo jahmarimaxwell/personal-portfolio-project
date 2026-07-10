@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import TiltContainer from "../stylish/TiltContainer.jsx";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default function LandingPage() {
 const [showScroll, setShowScroll] = useState(false);
@@ -106,41 +103,14 @@ useEffect(() => {
         }));
     };
 
-    // Carousel settings
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    };
-
     return (
         <> 
         <div className="intro-words-container">
             <h4 className="intro-words"> 
                 {/* <strong className="arrow">↓</strong> Scroll Down <strong className="arrow">↓</strong>  */}
             </h4>
-            {/* <h3 className="intro-words">Carousel Coming Soon!</h3> */}
         </div>
-        {/* <div className="intro-container-holder"> */}
             <div className="intro-container">
-                {/* <div className="slider-container">
-                    <Slider className="slider" {...settings}>
-                        <div className="slider-item1"> */}
-                            {/* <img src="/personal-portfolio-project/sample-pictures/Galaxy.jpg"></img> */}
-                            {/* Sample
-                        </div>
-                        <div className="slider-item2">
-                            For
-                        </div>
-                        <div className="slider-item3">
-                            Carousel
-                        </div>
-                    </Slider>
-                </div> */}
 
                 <div className="project-section-container">
                     <div className="project-heading">
@@ -171,11 +141,13 @@ useEffect(() => {
                     <p className="running-game-lead"><strong>Download for Mac (v1.0)</strong></p>
                     <strong><h2 className="project-title">The Running Game</h2></strong> 
                     <div className="information">
+                    <strong>
                         <p className={`info-text ${showInfo.runningGame ? "visible" : "hidden"}`}>
                             A 2D Platformer aimed to replicate  
                             old Flash Player games. This was my 
                             first attempt at building a game.
                         </p>
+                    </strong>   
                     </div>
 
                     <button className="toggle-button" onClick={() => toggleInfo("runningGame")}>
@@ -197,12 +169,14 @@ useEffect(() => {
                 <div className="content">
                     <strong><h2 className="project-title">Random User Generator App</h2></strong>
                     <div className="information">
+                    <strong>   
                         <p className={`info-text ${showInfo.randomUser ? "visible" : "hidden"}`}>
                             This app demonstrates the use of an API.
                             Once refreshed, it grabs random information 
                             (email, phone number, address)
                             and displays it.
                         </p>
+                    </strong>   
                     </div>
 
                     <button className="toggle-button" onClick={() => toggleInfo("randomUser")}>
@@ -226,6 +200,7 @@ useEffect(() => {
                 <div className="content">
                     <strong><h2 className="project-title">Marvel World</h2></strong>
                     <div className="information">
+                    <strong>   
                         <p className={`info-text ${showInfo.marvelWorld ? "visible" : "hidden"}`}>
                             This App demonstrates the use of React 
                             and the Marvel API.
@@ -234,6 +209,7 @@ useEffect(() => {
                             as well as their description. It also allows you
                             to see which comic issue they appear in.
                         </p>
+                    </strong>   
                     </div>
 
                     <button className="toggle-button" onClick={() => toggleInfo("marvelWorld")}>
@@ -255,10 +231,12 @@ useEffect(() => {
                 <div className="content">
                     <div className="information">
                         <strong><h2 className="project-title">Palette Picker</h2></strong>
+                        <strong>   
                         <p className={`info-text ${showInfo.palettePicker ? "visible" : "hidden"}`}>
                             Palette Picker lets you create a palette of 3 colors and 
                             copy the hex code of colors on the palette.
                         </p>
+                        </strong>   
                     </div>
 
                     <button className="toggle-button" onClick={() => toggleInfo("palettePicker")}>

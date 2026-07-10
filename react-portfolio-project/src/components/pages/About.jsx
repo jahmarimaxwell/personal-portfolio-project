@@ -40,10 +40,11 @@ export default function About() {
                 <div className="email"><strong>jahmarimaxwell@gmail.com</strong></div>
                 <div className="info-container">
                     <div className="portrait-holder">
+                        <h2 className="hover-text"> (Hover over me) </h2>
                         <TiltContainer> 
-                        {/* <a href="https://github.com/jahmarimaxwell"> */}
+                        <a href="https://github.com/jahmarimaxwell">
                             <img className="portrait" src="/personal-portfolio-project/pictures/Professional-Headshot.jpg"></img>                        
-                        {/* </a> */}
+                        </a>
                         </TiltContainer> 
                         <h2 className="viewgithub"> Click to view github </h2>
                     </div>
