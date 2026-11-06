@@ -188,7 +188,7 @@ useEffect(() => {
             
 
             {/* Marvel World App */}
-            <div className="display-container">
+            {/* <div className="display-container">
                 <TiltContainer>
                 <a href="https://react-api-project.github.io/marvel-comic-react-project/">
                     <div className="picture-div">
@@ -216,7 +216,7 @@ useEffect(() => {
                         {showInfo.marvelWorld ? "Hide Info" : "Show Info"}
                     </button>
                 </div>
-            </div>
+            </div> */}
             
             {/* Palette Picker */} 
             <div className="display-container">
