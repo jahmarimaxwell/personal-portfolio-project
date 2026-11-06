@@ -25,7 +25,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
@@ -284,7 +284,7 @@ button:focus-visible {
   padding: 0px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100%;
   /* Makes NavBar sticky */
   align-items: center;
@@ -614,6 +614,14 @@ a:hover {
 }
 
 .info-text.visible {
+  /* font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 0,
+    "EHLT" 0;
+  color: white; */
   display: block;
   font-size: 30px;
 }
